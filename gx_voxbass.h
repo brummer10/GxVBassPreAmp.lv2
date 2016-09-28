@@ -36,6 +36,7 @@ typedef enum
    MID, 
    TREBLE, 
    VOLUME, 
+   CAB, 
 } PortIndex;
 
 #endif //SRC_HEADERS_GXEFFECTS_H_
