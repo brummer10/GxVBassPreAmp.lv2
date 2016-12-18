@@ -1,0 +1,1001 @@
+// generated from file './/voxbass.dsp' by dsp2cc:
+// Code generated with Faust 0.9.73 (http://faust.grame.fr)
+
+
+namespace voxbass {
+
+class Dsp: public PluginLV2 {
+private:
+	uint32_t fSamplingFreq;
+	int 	iConst0;
+	double 	fConst1;
+	double 	fConst2;
+	double 	fConst3;
+	double 	fConst4;
+	double 	fConst5;
+	double 	fConst6;
+	double 	fConst7;
+	double 	fConst8;
+	double 	fConst9;
+	FAUSTFLOAT 	fslider0;
+	FAUSTFLOAT	*fslider0_;
+	double 	fRec0[2];
+	double 	fConst10;
+	FAUSTFLOAT 	fslider1;
+	FAUSTFLOAT	*fslider1_;
+	double 	fRec1[2];
+	double 	fConst11;
+	double 	fConst12;
+	double 	fConst13;
+	double 	fConst14;
+	double 	fConst15;
+	double 	fConst16;
+	double 	fConst17;
+	double 	fConst18;
+	double 	fConst19;
+	double 	fConst20;
+	double 	fConst21;
+	double 	fConst22;
+	double 	fConst23;
+	double 	fConst24;
+	double 	fConst25;
+	double 	fConst26;
+	double 	fConst27;
+	double 	fConst28;
+	double 	fConst29;
+	double 	fConst30;
+	double 	fConst31;
+	double 	fConst32;
+	double 	fConst33;
+	double 	fConst34;
+	double 	fConst35;
+	double 	fConst36;
+	double 	fConst37;
+	double 	fConst38;
+	double 	fConst39;
+	double 	fConst40;
+	double 	fConst41;
+	double 	fConst42;
+	double 	fConst43;
+	double 	fConst44;
+	double 	fConst45;
+	double 	fConst46;
+	double 	fConst47;
+	double 	fConst48;
+	double 	fConst49;
+	double 	fConst50;
+	double 	fConst51;
+	double 	fConst52;
+	double 	fConst53;
+	double 	fConst54;
+	double 	fConst55;
+	double 	fConst56;
+	double 	fConst57;
+	double 	fConst58;
+	double 	fConst59;
+	double 	fConst60;
+	double 	fConst61;
+	double 	fConst62;
+	double 	fConst63;
+	double 	fConst64;
+	double 	fConst65;
+	double 	fConst66;
+	double 	fConst67;
+	double 	fConst68;
+	double 	fConst69;
+	double 	fConst70;
+	double 	fConst71;
+	double 	fConst72;
+	double 	fConst73;
+	double 	fConst74;
+	double 	fConst75;
+	double 	fConst76;
+	double 	fConst77;
+	double 	fConst78;
+	double 	fConst79;
+	double 	fConst80;
+	double 	fConst81;
+	double 	fConst82;
+	double 	fConst83;
+	double 	fConst84;
+	double 	fConst85;
+	double 	fConst86;
+	double 	fConst87;
+	double 	fConst88;
+	double 	fConst89;
+	double 	fConst90;
+	double 	fConst91;
+	double 	fConst92;
+	double 	fConst93;
+	double 	fConst94;
+	double 	fConst95;
+	double 	fConst96;
+	double 	fConst97;
+	double 	fConst98;
+	double 	fConst99;
+	double 	fConst100;
+	double 	fConst101;
+	double 	fConst102;
+	double 	fConst103;
+	double 	fConst104;
+	double 	fConst105;
+	double 	fConst106;
+	double 	fConst107;
+	FAUSTFLOAT 	fslider2;
+	FAUSTFLOAT	*fslider2_;
+	double 	fRec6[2];
+	double 	fConst108;
+	double 	fConst109;
+	double 	fConst110;
+	double 	fConst111;
+	double 	fConst112;
+	double 	fConst113;
+	double 	fConst114;
+	double 	fConst115;
+	double 	fConst116;
+	double 	fConst117;
+	FAUSTFLOAT 	fslider3;
+	FAUSTFLOAT	*fslider3_;
+	double 	fRec7[2];
+	double 	fConst118;
+	double 	fConst119;
+	double 	fConst120;
+	double 	fConst121;
+	double 	fConst122;
+	double 	fConst123;
+	double 	fConst124;
+	double 	fConst125;
+	double 	fConst126;
+	double 	fConst127;
+	double 	fConst128;
+	double 	fConst129;
+	double 	fConst130;
+	double 	fConst131;
+	double 	fConst132;
+	double 	fConst133;
+	double 	fConst134;
+	double 	fConst135;
+	double 	fConst136;
+	double 	fConst137;
+	double 	fConst138;
+	double 	fConst139;
+	double 	fConst140;
+	double 	fConst141;
+	double 	fConst142;
+	double 	fConst143;
+	double 	fConst144;
+	double 	fConst145;
+	double 	fConst146;
+	double 	fConst147;
+	double 	fConst148;
+	double 	fConst149;
+	double 	fConst150;
+	double 	fConst151;
+	double 	fConst152;
+	double 	fConst153;
+	double 	fConst154;
+	double 	fConst155;
+	double 	fConst156;
+	double 	fConst157;
+	double 	fConst158;
+	double 	fConst159;
+	double 	fConst160;
+	double 	fConst161;
+	double 	fConst162;
+	double 	fConst163;
+	double 	fConst164;
+	double 	fConst165;
+	double 	fConst166;
+	double 	fConst167;
+	double 	fConst168;
+	double 	fConst169;
+	double 	fConst170;
+	double 	fConst171;
+	double 	fConst172;
+	double 	fConst173;
+	double 	fConst174;
+	double 	fConst175;
+	double 	fConst176;
+	double 	fConst177;
+	double 	fConst178;
+	double 	fConst179;
+	double 	fConst180;
+	double 	fConst181;
+	double 	fConst182;
+	double 	fConst183;
+	double 	fConst184;
+	double 	fConst185;
+	double 	fConst186;
+	double 	fConst187;
+	double 	fConst188;
+	double 	fConst189;
+	double 	fConst190;
+	double 	fConst191;
+	double 	fConst192;
+	double 	fConst193;
+	double 	fConst194;
+	double 	fConst195;
+	double 	fConst196;
+	double 	fConst197;
+	double 	fVec0[2];
+	double 	fConst198;
+	double 	fRec9[2];
+	double 	fRec8[9];
+	double 	fConst199;
+	double 	fConst200;
+	double 	fConst201;
+	double 	fConst202;
+	double 	fConst203;
+	double 	fConst204;
+	double 	fConst205;
+	double 	fConst206;
+	double 	fConst207;
+	double 	fConst208;
+	double 	fConst209;
+	double 	fConst210;
+	double 	fConst211;
+	double 	fConst212;
+	double 	fConst213;
+	double 	fConst214;
+	double 	fConst215;
+	double 	fConst216;
+	double 	fConst217;
+	double 	fConst218;
+	double 	fConst219;
+	double 	fConst220;
+	double 	fConst221;
+	double 	fConst222;
+	double 	fConst223;
+	double 	fConst224;
+	double 	fConst225;
+	double 	fConst226;
+	double 	fConst227;
+	double 	fConst228;
+	double 	fConst229;
+	double 	fConst230;
+	double 	fConst231;
+	double 	fConst232;
+	double 	fConst233;
+	double 	fConst234;
+	double 	fConst235;
+	double 	fConst236;
+	double 	fConst237;
+	double 	fConst238;
+	double 	fConst239;
+	double 	fConst240;
+	double 	fConst241;
+	double 	fConst242;
+	double 	fConst243;
+	double 	fConst244;
+	double 	fConst245;
+	double 	fConst246;
+	double 	fConst247;
+	double 	fConst248;
+	double 	fConst249;
+	double 	fConst250;
+	double 	fConst251;
+	double 	fConst252;
+	double 	fConst253;
+	double 	fConst254;
+	double 	fConst255;
+	double 	fConst256;
+	double 	fConst257;
+	double 	fConst258;
+	double 	fConst259;
+	double 	fConst260;
+	double 	fConst261;
+	double 	fConst262;
+	double 	fConst263;
+	double 	fConst264;
+	double 	fConst265;
+	double 	fConst266;
+	double 	fConst267;
+	double 	fConst268;
+	double 	fConst269;
+	double 	fConst270;
+	double 	fVec1[2];
+	double 	fRec5[2];
+	double 	fRec4[3];
+	double 	fConst271;
+	double 	fConst272;
+	double 	fConst273;
+	double 	fConst274;
+	double 	fVec2[2];
+	double 	fRec3[2];
+	double 	fRec2[7];
+	double 	fConst275;
+	double 	fConst276;
+	double 	fConst277;
+	double 	fConst278;
+	double 	fConst279;
+	double 	fConst280;
+	double 	fConst281;
+	double 	fConst282;
+	double 	fConst283;
+	double 	fConst284;
+	double 	fConst285;
+	double 	fConst286;
+	double 	fConst287;
+	double 	fConst288;
+	double 	fConst289;
+	double 	fConst290;
+	double 	fConst291;
+	double 	fConst292;
+	double 	fConst293;
+	double 	fConst294;
+	double 	fConst295;
+	double 	fConst296;
+	double 	fConst297;
+	double 	fConst298;
+	double 	fConst299;
+	double 	fConst300;
+	double 	fConst301;
+	double 	fConst302;
+	double 	fConst303;
+	double 	fConst304;
+	double 	fConst305;
+	double 	fConst306;
+	double 	fConst307;
+	double 	fConst308;
+	double 	fConst309;
+	double 	fConst310;
+	double 	fConst311;
+	double 	fConst312;
+	double 	fConst313;
+	double 	fConst314;
+	double 	fConst315;
+	double 	fConst316;
+	double 	fConst317;
+	double 	fConst318;
+	double 	fConst319;
+	double 	fConst320;
+	double 	fConst321;
+	double 	fConst322;
+	double 	fConst323;
+	double 	fConst324;
+	double 	fConst325;
+	double 	fConst326;
+	double 	fConst327;
+	double 	fConst328;
+	double 	fConst329;
+	double 	fConst330;
+	double 	fConst331;
+	double 	fConst332;
+	double 	fConst333;
+	double 	fConst334;
+	double 	fConst335;
+	double 	fConst336;
+	double 	fConst337;
+	double 	fConst338;
+	double 	fConst339;
+	double 	fConst340;
+	double 	fConst341;
+	double 	fConst342;
+	double 	fConst343;
+	double 	fVec3[2];
+	double 	fConst344;
+	double 	fConst345;
+	double 	fConst346;
+	double 	fConst347;
+	double 	fConst348;
+	double 	fConst349;
+	double 	fConst350;
+	double 	fConst351;
+	double 	fConst352;
+	double 	fConst353;
+	double 	fConst354;
+	double 	fConst355;
+	double 	fConst356;
+	double 	fConst357;
+	double 	fConst358;
+	double 	fConst359;
+	double 	fConst360;
+	double 	fConst361;
+	double 	fConst362;
+	double 	fConst363;
+	double 	fRec13[2];
+	double 	fRec12[3];
+	double 	fConst364;
+	double 	fConst365;
+	double 	fVec4[2];
+	double 	fRec11[2];
+	double 	fRec10[10];
+	double 	fConst366;
+	double 	fConst367;
+	double 	fConst368;
+	double 	fConst369;
+	double 	fConst370;
+	double 	fConst371;
+	double 	fConst372;
+	double 	fConst373;
+	double 	fConst374;
+	double 	fConst375;
+	double 	fConst376;
+	double 	fConst377;
+	double 	fConst378;
+	double 	fConst379;
+	double 	fConst380;
+	double 	fConst381;
+	FAUSTFLOAT 	fslider4;
+	FAUSTFLOAT	*fslider4_;
+	void connect(uint32_t port,void* data);
+	void clear_state_f();
+	void init(uint32_t samplingFreq);
+	void compute(int count, FAUSTFLOAT *input0, FAUSTFLOAT *output0);
+
+	static void clear_state_f_static(PluginLV2*);
+	static void init_static(uint32_t samplingFreq, PluginLV2*);
+	static void compute_static(int count, FAUSTFLOAT *input0, FAUSTFLOAT *output0, PluginLV2*);
+	static void del_instance(PluginLV2 *p);
+	static void connect_static(uint32_t port,void* data, PluginLV2 *p);
+public:
+	Dsp();
+	~Dsp();
+};
+
+
+
+Dsp::Dsp()
+	: PluginLV2() {
+	version = PLUGINLV2_VERSION;
+	id = "voxbass";
+	name = N_("VoxBass100");
+	mono_audio = compute_static;
+	stereo_audio = 0;
+	set_samplerate = init_static;
+	activate_plugin = 0;
+	connect_ports = connect_static;
+	clear_state = clear_state_f_static;
+	delete_instance = del_instance;
+}
+
+Dsp::~Dsp() {
+}
+
+inline void Dsp::clear_state_f()
+{
+	for (int i=0; i<2; i++) fRec0[i] = 0;
+	for (int i=0; i<2; i++) fRec1[i] = 0;
+	for (int i=0; i<2; i++) fRec6[i] = 0;
+	for (int i=0; i<2; i++) fRec7[i] = 0;
+	for (int i=0; i<2; i++) fVec0[i] = 0;
+	for (int i=0; i<2; i++) fRec9[i] = 0;
+	for (int i=0; i<9; i++) fRec8[i] = 0;
+	for (int i=0; i<2; i++) fVec1[i] = 0;
+	for (int i=0; i<2; i++) fRec5[i] = 0;
+	for (int i=0; i<3; i++) fRec4[i] = 0;
+	for (int i=0; i<2; i++) fVec2[i] = 0;
+	for (int i=0; i<2; i++) fRec3[i] = 0;
+	for (int i=0; i<7; i++) fRec2[i] = 0;
+	for (int i=0; i<2; i++) fVec3[i] = 0;
+	for (int i=0; i<2; i++) fRec13[i] = 0;
+	for (int i=0; i<3; i++) fRec12[i] = 0;
+	for (int i=0; i<2; i++) fVec4[i] = 0;
+	for (int i=0; i<2; i++) fRec11[i] = 0;
+	for (int i=0; i<10; i++) fRec10[i] = 0;
+}
+
+void Dsp::clear_state_f_static(PluginLV2 *p)
+{
+	static_cast<Dsp*>(p)->clear_state_f();
+}
+
+inline void Dsp::init(uint32_t samplingFreq)
+{
+	fSamplingFreq = samplingFreq;
+	iConst0 = min(192000, max(1, fSamplingFreq));
+	fConst1 = double(iConst0);
+	fConst2 = (4.13550981986041e-30 * fConst1);
+	fConst3 = ((fConst1 * (3.13551886117859e-16 + (fConst1 * (1.06164545413707e-16 + (fConst1 * (2.77441101009661e-18 + (fConst1 * (8.04822170327264e-21 + (fConst1 * (1.84390744000983e-24 + fConst2)))))))))) - 1.24923251917087e-28);
+	fConst4 = (1.64707043831756e-29 * fConst1);
+	fConst5 = ((fConst1 * (6.44448897772097e-31 + (fConst1 * (2.95508605733656e-31 + (fConst1 * (3.66244113144402e-20 + (fConst1 * ((fConst1 * (2.42868964613229e-24 + fConst4)) - 6.97773515189924e-22)))))))) - 3.40368577629377e-43);
+	fConst6 = (1.64712701789358e-29 * fConst1);
+	fConst7 = (2.6915808669567e-43 + (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (0 - (3.94190757723752e-24 + fConst6))) - 2.43109507427627e-21)) - 6.41244703591706e-20)) - 1.35016786829611e-19)) - 6.13280679578764e-31)));
+	fConst8 = (7.52344369779261e-30 * fConst1);
+	fConst9 = ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (0 - (5.70763123290691e-25 + fConst8))) - 1.07517633440933e-20)) - 4.93626014624563e-32)) - 3.82718419752065e-34)) - 1.97683409833458e-45)) - 1.41549010076907e-58);
+	fConst10 = (5.54344948298749e-71 + (fConst1 * (4.93534556811339e-58 + (fConst1 * ((fConst1 * (3.95021554381384e-33 + (fConst1 * (9.11675875431262e-22 + (fConst1 * (5.70759444036171e-25 + fConst8)))))) - 3.43238652759687e-45)))));
+	fConst11 = (7.52116108828788e-30 * fConst1);
+	fConst12 = (3.38724285425653e-45 + (fConst1 * ((fConst1 * (2.70033573658755e-19 + (fConst1 * (5.50001180895154e-20 + (fConst1 * (9.15322513733459e-22 + (fConst1 * (fConst11 - 5.53401459960655e-24)))))))) - 6.23364363866714e-32)));
+	fConst13 = (1.41549010076796e-58 + (fConst1 * (1.97683409833359e-45 + (fConst1 * (3.82718419774764e-34 + (fConst1 * ((fConst1 * (8.92841159323076e-21 + (fConst1 * (5.53403450077627e-24 - fConst11)))) - 7.14983179413217e-33)))))));
+	fConst14 = (1.53982942201209e-29 * fConst1);
+	fConst15 = ((fConst1 * ((fConst1 * (4.30444062429748e-18 + (fConst1 * (1.19612956111896e-17 + (fConst1 * (1.2277712835055e-20 + (fConst1 * (7.03225420365346e-24 + fConst14)))))))) - 1.062391389923e-30)) - 1.03650419311251e-43);
+	fConst16 = (1.33732232641662e-43 + (fConst1 * (1.51803227830183e-30 + (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (0 - (7.03226223466348e-24 + fConst14))) - 1.2065713966488e-20)) - 1.0751631223747e-18)) - 4.43945741113035e-18)))));
+	fConst17 = (1.26856097503084e-32 * fConst1);
+	fConst18 = ((fConst1 * (7.73476124064158e-18 + (fConst1 * (1.16527744088298e-17 + (fConst1 * ((fConst1 * (9.56823113983053e-26 + fConst17)) - 3.66244007061449e-21)))))) - 1.51458773356024e-16);
+	fConst19 = (3.98771402617878e-32 * fConst1);
+	fConst20 = ((fConst1 * (1.65945574304514e-32 + (fConst1 * ((fConst1 * ((fConst1 * (4.55653915380135e-24 + fConst19)) - 1.36431725582145e-20)) - 7.18580709017103e-22)))) - 3.22224448886125e-31);
+	fConst21 = (1.86127341409698e-32 * fConst1);
+	fConst22 = ((fConst1 * (4.61669463602886e-35 + (fConst1 * (9.83031789875016e-21 + (fConst1 * (0 - (6.10024609084207e-24 + fConst21))))))) - 3.30573291966029e-48);
+	fConst23 = (1.30437594675812e-19 + (fConst1 * ((fConst1 * (1.24783053865278e-23 + (fConst1 * (6.10023011825936e-24 + fConst21)))) - 5.25578653814051e-21)));
+	fConst24 = (1.84580482701108e-32 * fConst1);
+	fConst25 = (3.30573291966029e-48 + (fConst1 * ((fConst1 * (8.93799877873786e-24 + (fConst1 * (fConst24 - 4.02801865237622e-27)))) - 4.61669463602886e-35)));
+	fConst26 = ((fConst1 * (4.86586673057942e-32 + (fConst1 * ((fConst1 * (4.02776931989579e-27 - fConst24)) - 9.84819389630763e-21)))) - 3.30573291966029e-48);
+	fConst27 = (3.98387979129472e-32 * fConst1);
+	fConst28 = (3.22224448886125e-31 + (fConst1 * ((fConst1 * (3.34647397806303e-21 + (fConst1 * (1.05146213965329e-20 + (fConst1 * (0 - (3.04345035015622e-24 + fConst27))))))) - 6.52187973379226e-20)));
+	fConst29 = (4.27954802453434e-32 * fConst1);
+	fConst30 = (1.61112224451854e-31 + (fConst1 * ((fConst1 * (1.51870414821984e-20 + (fConst1 * (1.88573421366408e-22 + (fConst1 * (0 - (1.20507777142541e-25 + fConst29))))))) - 2.21743910948881e-18)));
+	fConst31 = ((fConst1 * (2.15222031215091e-18 + (fConst1 * ((fConst1 * (2.34561864056598e-23 + (fConst1 * (1.20515893517956e-25 + fConst29)))) - 1.09252694012443e-17)))) - 1.61112224451854e-31);
+	fConst32 = ((fConst1 * ((fConst1 * (1.06164545413707e-16 + (fConst1 * ((fConst1 * (8.04822170327264e-21 + (fConst1 * (fConst2 - 1.84390744000983e-24)))) - 2.77441101009661e-18)))) - 3.13551886117859e-16)) - 1.24923251917087e-28);
+	fConst33 = ((fConst1 * ((fConst1 * (2.95508605733656e-31 + (fConst1 * ((fConst1 * ((fConst1 * (fConst4 - 2.42868964613229e-24)) - 6.97773515189924e-22)) - 3.66244113144402e-20)))) - 6.44448897772097e-31)) - 3.40368577629377e-43);
+	fConst34 = (2.6915808669567e-43 + (fConst1 * (6.13280679578764e-31 + (fConst1 * ((fConst1 * (6.41244703591706e-20 + (fConst1 * ((fConst1 * (3.94190757723752e-24 - fConst6)) - 2.43109507427627e-21)))) - 1.35016786829611e-19)))));
+	fConst35 = ((fConst1 * (1.97683409833458e-45 + (fConst1 * ((fConst1 * (4.93626014624563e-32 + (fConst1 * ((fConst1 * (5.70763123290691e-25 - fConst8)) - 1.07517633440933e-20)))) - 3.82718419752065e-34)))) - 1.41549010076907e-58);
+	fConst36 = (5.54344948298749e-71 + (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (9.11675875431262e-22 + (fConst1 * (fConst8 - 5.70759444036171e-25)))) - 3.95021554381384e-33)) - 3.43238652759687e-45)) - 4.93534556811339e-58)));
+	fConst37 = (3.38724285425653e-45 + (fConst1 * (6.23364363866714e-32 + (fConst1 * (2.70033573658755e-19 + (fConst1 * ((fConst1 * (9.15322513733459e-22 + (fConst1 * (5.53401459960655e-24 + fConst11)))) - 5.50001180895154e-20)))))));
+	fConst38 = (1.41549010076796e-58 + (fConst1 * ((fConst1 * (3.82718419774764e-34 + (fConst1 * (7.14983179413217e-33 + (fConst1 * (8.92841159323076e-21 + (fConst1 * (0 - (5.53403450077627e-24 + fConst11))))))))) - 1.97683409833359e-45)));
+	fConst39 = ((fConst1 * (1.062391389923e-30 + (fConst1 * (4.30444062429748e-18 + (fConst1 * ((fConst1 * (1.2277712835055e-20 + (fConst1 * (fConst14 - 7.03225420365346e-24)))) - 1.19612956111896e-17)))))) - 1.03650419311251e-43);
+	fConst40 = (1.33732232641662e-43 + (fConst1 * ((fConst1 * ((fConst1 * (1.0751631223747e-18 + (fConst1 * ((fConst1 * (7.03226223466348e-24 - fConst14)) - 1.2065713966488e-20)))) - 4.43945741113035e-18)) - 1.51803227830183e-30)));
+	fConst41 = (2.48130589191624e-29 * fConst1);
+	fConst42 = faustpower<2>(fConst1);
+	fConst43 = ((fConst1 * ((fConst1 * (2.12329090827415e-16 + (fConst42 * ((fConst1 * (7.37562976003933e-24 - fConst41)) - 1.60964434065453e-20)))) - 1.25420754447144e-15)) - 7.49539511502524e-28);
+	fConst44 = (9.88242262990536e-29 * fConst1);
+	fConst45 = ((fConst1 * ((fConst1 * (5.91017211467311e-31 + (fConst42 * (1.39554703037985e-21 + (fConst1 * (9.71475858452917e-24 - fConst44)))))) - 2.57779559108839e-30)) - 2.04221146577626e-42);
+	fConst46 = (9.88276210736149e-29 * fConst1);
+	fConst47 = (1.61494852017402e-42 + (fConst1 * (2.45312271831506e-30 + (fConst1 * ((fConst42 * (4.86219014855253e-21 + (fConst1 * (fConst46 - 1.57676303089501e-23)))) - 2.70033573659221e-19)))));
+	fConst48 = (4.51406621867556e-29 * fConst1);
+	fConst49 = ((fConst1 * (7.90733639333831e-45 + (fConst1 * ((fConst42 * (2.15035266881866e-20 + (fConst1 * (fConst48 - 2.28305249316277e-24)))) - 7.65436839504129e-34)))) - 8.4929406046144e-58);
+	fConst50 = (3.32606968979249e-70 + (fConst1 * ((fConst1 * ((fConst42 * ((fConst1 * (2.28303777614468e-24 - fConst48)) - 1.82335175086252e-21)) - 6.86477305519374e-45)) - 1.97413822724536e-57)));
+	fConst51 = (4.51269665297273e-29 * fConst1);
+	fConst52 = (2.03234571255392e-44 + (fConst1 * (2.49345745546686e-31 + (fConst1 * (5.4006714731751e-19 + (fConst42 * ((fConst1 * (0 - (2.21360583984262e-23 + fConst51))) - 1.83064502746692e-21)))))));
+	fConst53 = (8.49294060460775e-58 + (fConst1 * ((fConst1 * (7.65436839549527e-34 + (fConst42 * ((fConst1 * (2.21361380031051e-23 + fConst51)) - 1.78568231864615e-20)))) - 7.90733639333436e-45)));
+	fConst54 = (9.23897653207256e-29 * fConst1);
+	fConst55 = ((fConst1 * (4.24956555969201e-30 + (fConst1 * (8.60888124859496e-18 + (fConst42 * ((fConst1 * (2.81290168146139e-23 - fConst54)) - 2.455542567011e-20)))))) - 6.21902515867503e-43);
+	fConst56 = (8.02393395849971e-43 + (fConst1 * ((fConst1 * ((fConst42 * (2.4131427932976e-20 + (fConst1 * (fConst54 - 2.81290489386539e-23)))) - 8.87891482226071e-18)) - 6.07212911320732e-30)));
+	fConst57 = (6.20326472979061e-29 * fConst1);
+	fConst58 = ((fConst1 * ((fConst1 * ((fConst1 * (8.32323303028982e-18 + (fConst1 * ((fConst1 * (fConst57 - 9.21953720004917e-24)) - 8.04822170327264e-21)))) - 1.06164545413707e-16)) - 1.56775943058929e-15)) - 1.87384877875631e-27);
+	fConst59 = (2.47060565747634e-28 * fConst1);
+	fConst60 = ((fConst1 * ((fConst1 * ((fConst1 * (1.09873233943321e-19 + (fConst1 * (6.97773515189924e-22 + (fConst1 * (fConst59 - 1.21434482306615e-23)))))) - 2.95508605733656e-31)) - 3.22224448886048e-30)) - 5.10552866444065e-42);
+	fConst61 = (2.47069052684037e-28 * fConst1);
+	fConst62 = (4.03737130043505e-42 + (fConst1 * (3.06640339789382e-30 + (fConst1 * (1.35016786829611e-19 + (fConst1 * ((fConst1 * (2.43109507427627e-21 + (fConst1 * (1.97095378861876e-23 - fConst61)))) - 1.92373411077512e-19)))))));
+	fConst63 = (1.12851655466889e-28 * fConst1);
+	fConst64 = ((fConst1 * (9.88417049167289e-45 + (fConst1 * (3.82718419752065e-34 + (fConst1 * ((fConst1 * (1.07517633440933e-20 + (fConst1 * (2.85381561645346e-24 - fConst63)))) - 1.48087804387369e-31)))))) - 2.1232351511536e-57);
+	fConst65 = (8.31517422448124e-70 + (fConst1 * ((fConst1 * (3.43238652759687e-45 + (fConst1 * (1.18506466314415e-32 + (fConst1 * ((fConst1 * (fConst63 - 2.85379722018085e-24)) - 9.11675875431262e-22)))))) - 2.46767278405669e-57)));
+	fConst66 = (1.12817416324318e-28 * fConst1);
+	fConst67 = (5.08086428138479e-44 + (fConst1 * (3.11682181933357e-31 + (fConst1 * ((fConst1 * (1.65000354268546e-19 + (fConst1 * ((fConst1 * (2.76700729980328e-23 + fConst66)) - 9.15322513733459e-22)))) - 2.70033573658755e-19)))));
+	fConst68 = (2.12323515115194e-57 + (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (0 - (2.76701725038813e-23 + fConst66))) - 8.92841159323076e-21)) - 2.14494953823965e-32)) - 3.82718419774764e-34)) - 9.88417049166796e-45)));
+	fConst69 = (2.30974413301814e-28 * fConst1);
+	fConst70 = ((fConst1 * (5.31195694961502e-30 + (fConst1 * ((fConst1 * (3.58838868335688e-17 + (fConst1 * ((fConst1 * (fConst69 - 3.51612710182673e-23)) - 1.2277712835055e-20)))) - 4.30444062429748e-18)))) - 1.55475628966876e-42);
+	fConst71 = (2.00598348962493e-42 + (fConst1 * ((fConst1 * (4.43945741113035e-18 + (fConst1 * ((fConst1 * (1.2065713966488e-20 + (fConst1 * (3.51613111733174e-23 - fConst69)))) - 3.2254893671241e-18)))) - 7.59016139150915e-30)));
+	fConst72 = ((fConst42 * ((fConst42 * (3.21928868130906e-20 - (8.27101963972082e-29 * fConst42))) - 4.24658181654829e-16)) - 2.49846503834175e-27);
+	fConst73 = ((fConst42 * ((fConst42 * (0 - (2.7910940607597e-21 + (3.29414087663512e-28 * fConst42)))) - 1.18203442293462e-30)) - 6.80737155258754e-42);
+	fConst74 = (5.3831617339134e-42 + (fConst42 * (5.40067147318442e-19 + (fConst42 * ((3.29425403578716e-28 * fConst42) - 9.72438029710506e-21)))));
+	fConst75 = (1.50468873955852e-28 * fConst42);
+	fConst76 = ((fConst42 * (1.53087367900826e-33 + (fConst42 * (fConst75 - 4.30070533763731e-20)))) - 2.83098020153813e-57);
+	fConst77 = (1.1086898965975e-69 + (fConst42 * (1.37295461103875e-44 + (fConst42 * (3.64670350172505e-21 - fConst75)))));
+	fConst78 = (1.50423221765758e-28 * fConst42);
+	fConst79 = (6.77448570851306e-44 + (fConst42 * ((fConst42 * (3.66129005493384e-21 - fConst78)) - 1.08013429463502e-18)));
+	fConst80 = (2.83098020153591e-57 + (fConst42 * ((fConst42 * (3.5713646372923e-20 + fConst78)) - 1.53087367909905e-33)));
+	fConst81 = (3.07965884402419e-28 * fConst42);
+	fConst82 = ((fConst42 * ((fConst42 * (4.91108513402201e-20 - fConst81)) - 1.72177624971899e-17)) - 2.07300838622501e-42);
+	fConst83 = (2.67464465283324e-42 + (fConst42 * (1.77578296445214e-17 + (fConst42 * (fConst81 - 4.8262855865952e-20)))));
+	fConst84 = ((fConst1 * (1.56775943058929e-15 + (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (9.21953720004917e-24 + fConst57)) - 8.04822170327264e-21)) - 8.32323303028982e-18)) - 1.06164545413707e-16)))) - 1.87384877875631e-27);
+	fConst85 = ((fConst1 * (3.22224448886048e-30 + (fConst1 * ((fConst1 * ((fConst1 * (6.97773515189924e-22 + (fConst1 * (1.21434482306615e-23 + fConst59)))) - 1.09873233943321e-19)) - 2.95508605733656e-31)))) - 5.10552866444065e-42);
+	fConst86 = (4.03737130043505e-42 + (fConst1 * ((fConst1 * (1.35016786829611e-19 + (fConst1 * (1.92373411077512e-19 + (fConst1 * (2.43109507427627e-21 + (fConst1 * (0 - (1.97095378861876e-23 + fConst61))))))))) - 3.06640339789382e-30)));
+	fConst87 = ((fConst1 * ((fConst1 * (3.82718419752065e-34 + (fConst1 * (1.48087804387369e-31 + (fConst1 * (1.07517633440933e-20 + (fConst1 * (0 - (2.85381561645346e-24 + fConst63))))))))) - 9.88417049167289e-45)) - 2.1232351511536e-57);
+	fConst88 = (8.31517422448124e-70 + (fConst1 * (2.46767278405669e-57 + (fConst1 * (3.43238652759687e-45 + (fConst1 * ((fConst1 * ((fConst1 * (2.85379722018085e-24 + fConst63)) - 9.11675875431262e-22)) - 1.18506466314415e-32)))))));
+	fConst89 = (5.08086428138479e-44 + (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (fConst66 - 2.76700729980328e-23)) - 9.15322513733459e-22)) - 1.65000354268546e-19)) - 2.70033573658755e-19)) - 3.11682181933357e-31)));
+	fConst90 = (2.12323515115194e-57 + (fConst1 * (9.88417049166796e-45 + (fConst1 * ((fConst1 * (2.14494953823965e-32 + (fConst1 * ((fConst1 * (2.76701725038813e-23 - fConst66)) - 8.92841159323076e-21)))) - 3.82718419774764e-34)))));
+	fConst91 = ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (3.51612710182673e-23 + fConst69)) - 1.2277712835055e-20)) - 3.58838868335688e-17)) - 4.30444062429748e-18)) - 5.31195694961502e-30)) - 1.55475628966876e-42);
+	fConst92 = (2.00598348962493e-42 + (fConst1 * (7.59016139150915e-30 + (fConst1 * (4.43945741113035e-18 + (fConst1 * (3.2254893671241e-18 + (fConst1 * (1.2065713966488e-20 + (fConst1 * (0 - (3.51613111733174e-23 + fConst69))))))))))));
+	fConst93 = ((fConst1 * (1.25420754447144e-15 + (fConst1 * (2.12329090827415e-16 + (fConst42 * ((fConst1 * (0 - (7.37562976003933e-24 + fConst41))) - 1.60964434065453e-20)))))) - 7.49539511502524e-28);
+	fConst94 = ((fConst1 * (2.57779559108839e-30 + (fConst1 * (5.91017211467311e-31 + (fConst42 * (1.39554703037985e-21 + (fConst1 * (0 - (9.71475858452917e-24 + fConst44))))))))) - 2.04221146577626e-42);
+	fConst95 = (1.61494852017402e-42 + (fConst1 * ((fConst1 * ((fConst42 * (4.86219014855253e-21 + (fConst1 * (1.57676303089501e-23 + fConst46)))) - 2.70033573659221e-19)) - 2.45312271831506e-30)));
+	fConst96 = ((fConst1 * ((fConst1 * ((fConst42 * (2.15035266881866e-20 + (fConst1 * (2.28305249316277e-24 + fConst48)))) - 7.65436839504129e-34)) - 7.90733639333831e-45)) - 8.4929406046144e-58);
+	fConst97 = (3.32606968979249e-70 + (fConst1 * (1.97413822724536e-57 + (fConst1 * ((fConst42 * ((fConst1 * (0 - (2.28303777614468e-24 + fConst48))) - 1.82335175086252e-21)) - 6.86477305519374e-45)))));
+	fConst98 = (2.03234571255392e-44 + (fConst1 * ((fConst1 * (5.4006714731751e-19 + (fConst42 * ((fConst1 * (2.21360583984262e-23 - fConst51)) - 1.83064502746692e-21)))) - 2.49345745546686e-31)));
+	fConst99 = (8.49294060460775e-58 + (fConst1 * (7.90733639333436e-45 + (fConst1 * (7.65436839549527e-34 + (fConst42 * ((fConst1 * (fConst51 - 2.21361380031051e-23)) - 1.78568231864615e-20)))))));
+	fConst100 = ((fConst1 * ((fConst1 * (8.60888124859496e-18 + (fConst42 * ((fConst1 * (0 - (2.81290168146139e-23 + fConst54))) - 2.455542567011e-20)))) - 4.24956555969201e-30)) - 6.21902515867503e-43);
+	fConst101 = (8.02393395849971e-43 + (fConst1 * (6.07212911320732e-30 + (fConst1 * ((fConst42 * (2.4131427932976e-20 + (fConst1 * (2.81290489386539e-23 + fConst54)))) - 8.87891482226071e-18)))));
+	fConst102 = (2.36301137905642e-10 * fConst1);
+	fConst103 = (0.00024035936046162 + (fConst1 * (fConst102 - 9.48587122718622e-06)));
+	fConst104 = (0.00048071872092324 - (4.72602275811285e-10 * fConst42));
+	fConst105 = (1.0 / (0.00024035936046162 + (fConst1 * (9.48587122718622e-06 + fConst102))));
+	fConst106 = (1.92529627659134e-39 * fConst1);
+	fConst107 = (3.23357227133522e-16 + (fConst1 * (1.13510423198382e-17 + (fConst1 * (9.51573004877601e-20 + (fConst1 * (1.23489756547062e-22 + (fConst1 * (5.3338333519646e-26 + (fConst1 * (7.06820551701561e-30 + (fConst1 * (2.75588927932986e-34 + fConst106)))))))))))));
+	fConst108 = (1.63288633577099e-38 * fConst1);
+	fConst109 = (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (0 - (2.8886681393884e-33 + fConst108))) - 1.22380298287253e-28)) - 5.97891285045565e-25)) - 6.57559879124984e-22)) - 2.70493592383428e-20)) - 1.10503345585892e-19));
+	fConst110 = (1.90156498997068e-38 * fConst1);
+	fConst111 = (1.95892294447717e-17 + (fConst1 * (5.09420379958945e-18 + (fConst1 * (1.88951592676649e-19 + (fConst1 * (1.70315358798795e-21 + (fConst1 * (1.27197539082944e-24 + (fConst1 * (1.6275988249883e-28 + (fConst1 * (3.4993097780779e-33 + fConst110)))))))))))));
+	fConst112 = (1.45022424488616e-38 * fConst1);
+	fConst113 = (fConst1 * (2.28520918671624e-21 + (fConst1 * (4.99352622765038e-22 + (fConst1 * (4.83309951544608e-25 + (fConst1 * (1.07525226870021e-28 + (fConst1 * (2.55893259997086e-33 + fConst112))))))))));
+	fConst114 = (1.70915998273057e-38 * fConst1);
+	fConst115 = ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (0 - (3.14082755831951e-33 + fConst114))) - 1.45514899806723e-28)) - 1.11126344104395e-24)) - 1.43632728325539e-21)) - 9.47067849160929e-20)) - 4.05105264917879e-19);
+	fConst116 = (1.72896220329133e-39 * fConst1);
+	fConst117 = ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (0 - (2.47057060517596e-34 + fConst116))) - 6.28852429480213e-30)) - 4.66623845928268e-26)) - 1.05878053917009e-22)) - 7.78363208113535e-20)) - 6.00488965844066e-18)) - 2.59682862126846e-17);
+	fConst118 = (1.17470552663686e-35 * fConst1);
+	fConst119 = (1.16377254046491e-18 + (fConst1 * ((fConst1 * (3.55031486822181e-22 + (fConst1 * ((fConst1 * (6.55885525437233e-29 + fConst118)) - 3.16419726163444e-25)))) - 4.0494025208599e-20)));
+	fConst120 = (1.09988351857082e-35 * fConst1);
+	fConst121 = (2.40668161368143e-20 + (fConst1 * ((fConst1 * (3.06797455387272e-25 + (fConst1 * (0 - (6.14090528477483e-29 + fConst120))))) - 3.39714683604509e-22)));
+	fConst122 = (9.3823923360494e-35 * fConst1);
+	fConst123 = (fConst1 * (4.81336322736286e-22 + (fConst1 * ((fConst1 * (5.32017237321892e-28 + fConst122)) - 1.95218079151343e-24))));
+	fConst124 = (8.28250881747858e-35 * fConst1);
+	fConst125 = ((fConst1 * ((fConst1 * (1.64538333612616e-24 + (fConst1 * (0 - (4.70608184474143e-28 + fConst124))))) - 1.41621639131778e-22)) - 2.40668161368143e-20);
+	fConst126 = (1.00206503180936e-34 * fConst1);
+	fConst127 = (fConst1 * (2.32754508092981e-20 + (fConst1 * ((fConst1 * (1.98753368998566e-24 + (fConst1 * (0 - (5.6822605863427e-28 + fConst126))))) - 5.75735780739837e-22))));
+	fConst128 = (8.84594479145671e-35 * fConst1);
+	fConst129 = ((fConst1 * (1.72185743993009e-20 + (fConst1 * (2.20704293917657e-22 + (fConst1 * ((fConst1 * (5.02637506090546e-28 + fConst128)) - 1.67111396382221e-24)))))) - 1.16377254046491e-18);
+	fConst130 = ((fConst1 * (1.13510423198382e-17 + (fConst1 * ((fConst1 * (1.23489756547062e-22 + (fConst1 * ((fConst1 * (7.06820551701561e-30 + (fConst1 * (fConst106 - 2.75588927932986e-34)))) - 5.3338333519646e-26)))) - 9.51573004877601e-20)))) - 3.23357227133522e-16);
+	fConst131 = (fConst1 * ((fConst1 * (2.70493592383428e-20 + (fConst1 * ((fConst1 * (5.97891285045565e-25 + (fConst1 * ((fConst1 * (2.8886681393884e-33 - fConst108)) - 1.22380298287253e-28)))) - 6.57559879124984e-22)))) - 1.10503345585892e-19));
+	fConst132 = ((fConst1 * (5.09420379958945e-18 + (fConst1 * ((fConst1 * (1.70315358798795e-21 + (fConst1 * ((fConst1 * (1.6275988249883e-28 + (fConst1 * (fConst110 - 3.4993097780779e-33)))) - 1.27197539082944e-24)))) - 1.88951592676649e-19)))) - 1.95892294447717e-17);
+	fConst133 = (fConst1 * ((fConst1 * (4.99352622765038e-22 + (fConst1 * ((fConst1 * (1.07525226870021e-28 + (fConst1 * (fConst112 - 2.55893259997086e-33)))) - 4.83309951544608e-25)))) - 2.28520918671624e-21));
+	fConst134 = ((fConst1 * (9.47067849160929e-20 + (fConst1 * ((fConst1 * (1.11126344104395e-24 + (fConst1 * ((fConst1 * (3.14082755831951e-33 - fConst114)) - 1.45514899806723e-28)))) - 1.43632728325539e-21)))) - 4.05105264917879e-19);
+	fConst135 = (2.59682862126846e-17 + (fConst1 * ((fConst1 * (7.78363208113535e-20 + (fConst1 * ((fConst1 * (4.66623845928268e-26 + (fConst1 * ((fConst1 * (2.47057060517596e-34 - fConst116)) - 6.28852429480213e-30)))) - 1.05878053917009e-22)))) - 6.00488965844066e-18)));
+	fConst136 = (1.54023702127307e-38 * fConst1);
+	fConst137 = ((fConst1 * (4.54041692793529e-17 + (fConst1 * ((fConst42 * (1.06676667039292e-25 + (fConst1 * ((fConst1 * (1.65353356759792e-33 - fConst136)) - 2.82728220680625e-29)))) - 1.9031460097552e-19)))) - 1.94014336280113e-15);
+	fConst138 = (1.3063090686168e-37 * fConst1);
+	fConst139 = (fConst1 * ((fConst1 * (5.40987184766855e-20 + (fConst42 * ((fConst1 * (4.89521193149012e-28 + (fConst1 * (fConst138 - 1.73320088363304e-32)))) - 1.19578257009113e-24)))) - 4.42013382343566e-19));
+	fConst140 = (1.52125199197655e-37 * fConst1);
+	fConst141 = ((fConst1 * (2.03768151983578e-17 + (fConst1 * ((fConst42 * (2.54395078165888e-24 + (fConst1 * ((fConst1 * (2.09958586684674e-32 - fConst140)) - 6.5103952999532e-28)))) - 3.77903185353297e-19)))) - 1.1753537666863e-16);
+	fConst142 = (1.16017939590893e-37 * fConst1);
+	fConst143 = (fConst1 * ((fConst42 * (9.66619903089217e-25 + (fConst1 * ((fConst1 * (1.53535955998251e-32 - fConst142)) - 4.30100907480083e-28)))) - 4.57041837343248e-21));
+	fConst144 = (1.36732798618446e-37 * fConst1);
+	fConst145 = ((fConst1 * (1.89413569832186e-19 + (fConst42 * ((fConst1 * (5.82059599226893e-28 + (fConst1 * (fConst144 - 1.88449653499171e-32)))) - 2.2225268820879e-24)))) - 1.62042105967152e-18);
+	fConst146 = (1.38316976263306e-38 * fConst1);
+	fConst147 = (1.55809717276107e-16 + (fConst1 * ((fConst1 * (1.55672641622707e-19 + (fConst42 * ((fConst1 * (2.51540971792085e-29 + (fConst1 * (fConst146 - 1.48234236310557e-33)))) - 9.33247691856536e-26)))) - 2.40195586337626e-17)));
+	fConst148 = (5.39082957445574e-38 * fConst1);
+	fConst149 = ((fConst1 * (4.54041692793529e-17 + (fConst1 * (1.9031460097552e-19 + (fConst1 * ((fConst1 * (1.06676667039292e-25 + (fConst1 * (2.82728220680625e-29 + (fConst1 * (fConst148 - 3.85824499106181e-33)))))) - 4.93959026188247e-22)))))) - 4.52700117986931e-15);
+	fConst150 = (4.57208174015878e-37 * fConst1);
+	fConst151 = (fConst1 * ((fConst1 * ((fConst1 * (2.63023951649994e-21 + (fConst1 * ((fConst1 * ((fConst1 * (4.04413539514376e-32 - fConst150)) - 4.89521193149012e-28)) - 1.19578257009113e-24)))) - 5.40987184766855e-20)) - 4.42013382343566e-19));
+	fConst152 = (5.32438197191791e-37 * fConst1);
+	fConst153 = ((fConst1 * (2.03768151983578e-17 + (fConst1 * (3.77903185353297e-19 + (fConst1 * ((fConst1 * (2.54395078165888e-24 + (fConst1 * (6.5103952999532e-28 + (fConst1 * (fConst152 - 4.89903368930905e-32)))))) - 6.81261435195178e-21)))))) - 2.74249212226804e-16);
+	fConst154 = (4.06062788568125e-37 * fConst1);
+	fConst155 = (fConst1 * (4.57041837343248e-21 + (fConst1 * ((fConst1 * (9.66619903089217e-25 + (fConst1 * (4.30100907480083e-28 + (fConst1 * (fConst154 - 3.5825056399592e-32)))))) - 1.99741049106015e-21))));
+	fConst156 = (4.7856479516456e-37 * fConst1);
+	fConst157 = ((fConst1 * ((fConst1 * (5.74530913302157e-21 + (fConst1 * ((fConst1 * ((fConst1 * (4.39715858164732e-32 - fConst156)) - 5.82059599226893e-28)) - 2.2225268820879e-24)))) - 1.89413569832186e-19)) - 1.62042105967152e-18);
+	fConst158 = (4.84109416921572e-38 * fConst1);
+	fConst159 = (3.63556006977584e-16 + (fConst1 * ((fConst1 * ((fConst1 * (4.23512215668038e-22 + (fConst1 * ((fConst1 * ((fConst1 * (3.45879884724634e-33 - fConst158)) - 2.51540971792085e-29)) - 9.33247691856536e-26)))) - 1.55672641622707e-19)) - 2.40195586337626e-17)));
+	fConst160 = (1.07816591489115e-37 * fConst1);
+	fConst161 = ((fConst1 * ((fConst1 * (5.7094380292656e-19 + (fConst42 * ((fConst1 * (2.82728220680625e-29 + (fConst1 * (3.85824499106181e-33 - fConst160)))) - 3.20030001117876e-25)))) - 4.54041692793529e-17)) - 4.52700117986931e-15);
+	fConst162 = (9.14416348031757e-37 * fConst1);
+	fConst163 = (fConst1 * (4.42013382343566e-19 + (fConst1 * ((fConst42 * (3.58734771027339e-24 + (fConst1 * ((fConst1 * (fConst162 - 4.04413539514376e-32)) - 4.89521193149012e-28)))) - 1.62296155430057e-19))));
+	fConst164 = (1.06487639438358e-36 * fConst1);
+	fConst165 = ((fConst1 * ((fConst1 * (1.13370955605989e-18 + (fConst42 * ((fConst1 * (6.5103952999532e-28 + (fConst1 * (4.89903368930905e-32 - fConst164)))) - 7.63185234497663e-24)))) - 2.03768151983578e-17)) - 2.74249212226804e-16);
+	fConst166 = (8.12125577136249e-37 * fConst1);
+	fConst167 = (fConst1 * (1.37112551202975e-20 + (fConst42 * ((fConst1 * (4.30100907480083e-28 + (fConst1 * (3.5825056399592e-32 - fConst166)))) - 2.89985970926765e-24))));
+	fConst168 = (9.57129590329121e-37 * fConst1);
+	fConst169 = (1.62042105967152e-18 + (fConst1 * ((fConst42 * (6.66758064626369e-24 + (fConst1 * ((fConst1 * (fConst168 - 4.39715858164732e-32)) - 5.82059599226893e-28)))) - 5.68240709496558e-19)));
+	fConst170 = (9.68218833843144e-38 * fConst1);
+	fConst171 = (3.63556006977584e-16 + (fConst1 * (2.40195586337626e-17 + (fConst1 * ((fConst42 * (2.79974307556961e-25 + (fConst1 * ((fConst1 * (fConst170 - 3.45879884724634e-33)) - 2.51540971792085e-29)))) - 4.67017924868121e-19)))));
+	fConst172 = ((fConst42 * (7.40938539282371e-22 + (fConst42 * ((1.34770739361393e-37 * fConst42) - 7.06820551701561e-29)))) - 1.13510423198382e-16);
+	fConst173 = (1.10503345585892e-18 + (fConst42 * ((fConst42 * (1.22380298287253e-27 - (1.1430204350397e-36 * fConst42))) - 3.9453592747499e-21)));
+	fConst174 = ((fConst42 * (1.02189215279277e-20 + (fConst42 * ((1.33109549297948e-36 * fConst42) - 1.6275988249883e-27)))) - 5.09420379958945e-17);
+	fConst175 = (6.00488965844066e-17 + (fConst42 * ((fConst42 * (6.28852429480213e-29 - (1.21027354230393e-37 * fConst42))) - 6.35268323502056e-22)));
+	fConst176 = (fConst42 * (2.99611573659023e-21 + (fConst42 * ((1.01515697142031e-36 * fConst42) - 1.07525226870021e-27))));
+	fConst177 = (4.05105264917879e-18 + (fConst42 * ((fConst42 * (1.45514899806723e-27 - (1.1964119879114e-36 * fConst42))) - 8.61796369953236e-21)));
+	fConst178 = (4.52700117986931e-15 + (fConst1 * ((fConst1 * ((fConst42 * (3.20030001117876e-25 + (fConst1 * (2.82728220680625e-29 + (fConst1 * (0 - (3.85824499106181e-33 + fConst160))))))) - 5.7094380292656e-19)) - 4.54041692793529e-17)));
+	fConst179 = (fConst1 * (4.42013382343566e-19 + (fConst1 * (1.62296155430057e-19 + (fConst42 * ((fConst1 * ((fConst1 * (4.04413539514376e-32 + fConst162)) - 4.89521193149012e-28)) - 3.58734771027339e-24))))));
+	fConst180 = (2.74249212226804e-16 + (fConst1 * ((fConst1 * ((fConst42 * (7.63185234497663e-24 + (fConst1 * (6.5103952999532e-28 + (fConst1 * (0 - (4.89903368930905e-32 + fConst164))))))) - 1.13370955605989e-18)) - 2.03768151983578e-17)));
+	fConst181 = (fConst1 * ((fConst42 * (2.89985970926765e-24 + (fConst1 * (4.30100907480083e-28 + (fConst1 * (0 - (3.5825056399592e-32 + fConst166))))))) - 1.37112551202975e-20));
+	fConst182 = (1.62042105967152e-18 + (fConst1 * (5.68240709496558e-19 + (fConst42 * ((fConst1 * ((fConst1 * (4.39715858164732e-32 + fConst168)) - 5.82059599226893e-28)) - 6.66758064626369e-24)))));
+	fConst183 = ((fConst1 * (2.40195586337626e-17 + (fConst1 * (4.67017924868121e-19 + (fConst42 * ((fConst1 * ((fConst1 * (3.45879884724634e-33 + fConst170)) - 2.51540971792085e-29)) - 2.79974307556961e-25)))))) - 3.63556006977584e-16);
+	fConst184 = (4.52700117986931e-15 + (fConst1 * (4.54041692793529e-17 + (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (2.82728220680625e-29 + (fConst1 * (3.85824499106181e-33 + fConst148)))) - 1.06676667039292e-25)) - 4.93959026188247e-22)) - 1.9031460097552e-19)))));
+	fConst185 = (fConst1 * ((fConst1 * (5.40987184766855e-20 + (fConst1 * (2.63023951649994e-21 + (fConst1 * (1.19578257009113e-24 + (fConst1 * ((fConst1 * (0 - (4.04413539514376e-32 + fConst150))) - 4.89521193149012e-28)))))))) - 4.42013382343566e-19));
+	fConst186 = (2.74249212226804e-16 + (fConst1 * (2.03768151983578e-17 + (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (6.5103952999532e-28 + (fConst1 * (4.89903368930905e-32 + fConst152)))) - 2.54395078165888e-24)) - 6.81261435195178e-21)) - 3.77903185353297e-19)))));
+	fConst187 = (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (4.30100907480083e-28 + (fConst1 * (3.5825056399592e-32 + fConst154)))) - 9.66619903089217e-25)) - 1.99741049106015e-21)) - 4.57041837343248e-21));
+	fConst188 = ((fConst1 * (1.89413569832186e-19 + (fConst1 * (5.74530913302157e-21 + (fConst1 * (2.2225268820879e-24 + (fConst1 * ((fConst1 * (0 - (4.39715858164732e-32 + fConst156))) - 5.82059599226893e-28)))))))) - 1.62042105967152e-18);
+	fConst189 = ((fConst1 * ((fConst1 * (1.55672641622707e-19 + (fConst1 * (4.23512215668038e-22 + (fConst1 * (9.33247691856536e-26 + (fConst1 * ((fConst1 * (0 - (3.45879884724634e-33 + fConst158))) - 2.51540971792085e-29)))))))) - 2.40195586337626e-17)) - 3.63556006977584e-16);
+	fConst190 = (1.94014336280113e-15 + (fConst1 * (4.54041692793529e-17 + (fConst1 * (1.9031460097552e-19 + (fConst42 * ((fConst1 * ((fConst1 * (0 - (1.65353356759792e-33 + fConst136))) - 2.82728220680625e-29)) - 1.06676667039292e-25)))))));
+	fConst191 = (fConst1 * ((fConst1 * ((fConst42 * (1.19578257009113e-24 + (fConst1 * (4.89521193149012e-28 + (fConst1 * (1.73320088363304e-32 + fConst138)))))) - 5.40987184766855e-20)) - 4.42013382343566e-19));
+	fConst192 = (1.1753537666863e-16 + (fConst1 * (2.03768151983578e-17 + (fConst1 * (3.77903185353297e-19 + (fConst42 * ((fConst1 * ((fConst1 * (0 - (2.09958586684674e-32 + fConst140))) - 6.5103952999532e-28)) - 2.54395078165888e-24)))))));
+	fConst193 = (fConst1 * (4.57041837343248e-21 + (fConst42 * ((fConst1 * ((fConst1 * (0 - (1.53535955998251e-32 + fConst142))) - 4.30100907480083e-28)) - 9.66619903089217e-25))));
+	fConst194 = ((fConst1 * ((fConst42 * (2.2225268820879e-24 + (fConst1 * (5.82059599226893e-28 + (fConst1 * (1.88449653499171e-32 + fConst144)))))) - 1.89413569832186e-19)) - 1.62042105967152e-18);
+	fConst195 = ((fConst1 * ((fConst1 * ((fConst42 * (9.33247691856536e-26 + (fConst1 * (2.51540971792085e-29 + (fConst1 * (1.48234236310557e-33 + fConst146)))))) - 1.55672641622707e-19)) - 2.40195586337626e-17)) - 1.55809717276107e-16);
+	fConst196 = (470.33999466970965 / double(iConst0));
+	fConst197 = (1 - fConst196);
+	fConst198 = (1.0 / (1 + fConst196));
+	fConst199 = (7.04823315982115e-35 * fConst1);
+	fConst200 = (4.65509016185963e-18 + (fConst1 * ((fConst42 * (6.32839452326887e-25 + (fConst1 * (0 - (2.62354210174893e-28 + fConst199))))) - 8.09880504171981e-20)));
+	fConst201 = (6.5993011114249e-35 * fConst1);
+	fConst202 = (4.81336322736286e-20 + (fConst42 * ((fConst1 * (2.45636211390993e-28 + fConst201)) - 6.13594910774543e-25)));
+	fConst203 = (5.62943540162964e-34 * fConst1);
+	fConst204 = (fConst42 * (3.90436158302686e-24 + (fConst1 * (0 - (2.12806894928757e-27 + fConst203)))));
+	fConst205 = (4.96950529048715e-34 * fConst1);
+	fConst206 = ((fConst42 * ((fConst1 * (1.88243273789657e-27 + fConst205)) - 3.29076667225232e-24)) - 4.81336322736286e-20);
+	fConst207 = (6.01239019085614e-34 * fConst1);
+	fConst208 = (fConst1 * (4.65509016185963e-20 + (fConst42 * ((fConst1 * (2.27290423453708e-27 + fConst207)) - 3.97506737997131e-24))));
+	fConst209 = (5.30756687487403e-34 * fConst1);
+	fConst210 = ((fConst1 * (3.44371487986018e-20 + (fConst42 * (3.34222792764443e-24 + (fConst1 * (0 - (2.01055002436219e-27 + fConst209))))))) - 4.65509016185963e-18);
+	fConst211 = (1.6445877372916e-34 * fConst1);
+	fConst212 = (fConst1 * (2.62354210174893e-28 + fConst211));
+	fConst213 = (4.65509016185963e-18 + (fConst1 * (8.09880504171981e-20 + (fConst1 * ((fConst1 * (6.32839452326887e-25 + fConst212)) - 1.42012594728872e-21)))));
+	fConst214 = (1.53983692599914e-34 * fConst1);
+	fConst215 = (fConst1 * (0 - (2.45636211390993e-28 + fConst214)));
+	fConst216 = ((fConst1 * (1.35885873441803e-21 + (fConst1 * (fConst215 - 6.13594910774543e-25)))) - 4.81336322736286e-20);
+	fConst217 = (1.31353492704692e-33 * fConst1);
+	fConst218 = (fConst1 * (2.12806894928757e-27 + fConst217));
+	fConst219 = (fConst1 * ((fConst1 * (3.90436158302686e-24 + fConst218)) - 1.92534529094515e-21));
+	fConst220 = (1.159551234447e-33 * fConst1);
+	fConst221 = (fConst1 * (0 - (1.88243273789657e-27 + fConst220)));
+	fConst222 = (4.81336322736286e-20 + (fConst1 * (5.66486556527112e-22 + (fConst1 * (fConst221 - 3.29076667225232e-24)))));
+	fConst223 = (1.4028910445331e-33 * fConst1);
+	fConst224 = (fConst1 * (0 - (2.27290423453708e-27 + fConst223)));
+	fConst225 = (fConst1 * ((fConst1 * (2.30294312295935e-21 + (fConst1 * (fConst224 - 3.97506737997131e-24)))) - 4.65509016185963e-20));
+	fConst226 = (1.23843227080394e-33 * fConst1);
+	fConst227 = (fConst1 * (2.01055002436219e-27 + fConst226));
+	fConst228 = ((fConst1 * ((fConst1 * ((fConst1 * (3.34222792764443e-24 + fConst227)) - 8.82817175670626e-22)) - 3.44371487986018e-20)) - 4.65509016185963e-18);
+	fConst229 = (fConst1 * (2.62354210174893e-28 - fConst211));
+	fConst230 = ((fConst1 * (2.42964151251594e-19 + (fConst42 * (fConst229 - 1.89851835698066e-24)))) - 4.65509016185963e-18);
+	fConst231 = (fConst1 * (fConst214 - 2.45636211390993e-28));
+	fConst232 = ((fConst42 * (1.84078473232363e-24 + fConst231)) - 1.44400896820886e-19);
+	fConst233 = (fConst1 * (2.12806894928757e-27 - fConst217));
+	fConst234 = (fConst42 * (fConst233 - 1.17130847490806e-23));
+	fConst235 = (fConst1 * (fConst220 - 1.88243273789657e-27));
+	fConst236 = (1.44400896820886e-19 + (fConst42 * (9.87230001675696e-24 + fConst235)));
+	fConst237 = (fConst1 * (fConst223 - 2.27290423453708e-27));
+	fConst238 = (fConst1 * ((fConst42 * (1.19252021399139e-23 + fConst237)) - 1.39652704855789e-19));
+	fConst239 = (fConst1 * (2.01055002436219e-27 - fConst226));
+	fConst240 = (4.65509016185963e-18 + (fConst1 * ((fConst42 * (fConst239 - 1.00266837829333e-23)) - 1.03311446395805e-19)));
+	fConst241 = ((fConst42 * (2.13018892093308e-21 - (6.55885525437233e-28 * fConst42))) - 1.16377254046491e-17);
+	fConst242 = (2.88801793641772e-21 - (5.32017237321892e-27 * fConst42));
+	fConst243 = ((4.70608184474144e-27 * fConst42) - 8.49729834790668e-22);
+	fConst244 = ((6.14090528477483e-28 * fConst42) - 2.03828810162705e-21);
+	fConst245 = (fConst42 * ((5.6822605863427e-27 * fConst42) - 3.45441468443902e-21));
+	fConst246 = (1.16377254046491e-17 + (fConst42 * (1.32422576350594e-21 - (5.02637506090546e-27 * fConst42))));
+	fConst247 = ((fConst1 * ((fConst42 * (1.89851835698066e-24 + fConst212)) - 2.42964151251594e-19)) - 4.65509016185963e-18);
+	fConst248 = (1.44400896820886e-19 + (fConst42 * (fConst215 - 1.84078473232363e-24)));
+	fConst249 = (fConst42 * (1.17130847490806e-23 + fConst218));
+	fConst250 = ((fConst42 * (fConst221 - 9.87230001675696e-24)) - 1.44400896820886e-19);
+	fConst251 = (fConst1 * (1.39652704855789e-19 + (fConst42 * (fConst224 - 1.19252021399139e-23))));
+	fConst252 = (4.65509016185963e-18 + (fConst1 * (1.03311446395805e-19 + (fConst42 * (1.00266837829333e-23 + fConst227)))));
+	fConst253 = (4.65509016185963e-18 + (fConst1 * ((fConst1 * ((fConst1 * (fConst229 - 6.32839452326887e-25)) - 1.42012594728872e-21)) - 8.09880504171981e-20)));
+	fConst254 = (4.81336322736286e-20 + (fConst1 * (1.35885873441803e-21 + (fConst1 * (6.13594910774543e-25 + fConst231)))));
+	fConst255 = (fConst1 * ((fConst1 * (fConst233 - 3.90436158302686e-24)) - 1.92534529094515e-21));
+	fConst256 = ((fConst1 * (5.66486556527112e-22 + (fConst1 * (3.29076667225232e-24 + fConst235)))) - 4.81336322736286e-20);
+	fConst257 = (fConst1 * (4.65509016185963e-20 + (fConst1 * (2.30294312295935e-21 + (fConst1 * (3.97506737997131e-24 + fConst237))))));
+	fConst258 = ((fConst1 * (3.44371487986018e-20 + (fConst1 * ((fConst1 * (fConst239 - 3.34222792764443e-24)) - 8.82817175670626e-22)))) - 4.65509016185963e-18);
+	fConst259 = (4.65509016185963e-18 + (fConst1 * (8.09880504171981e-20 + (fConst42 * ((fConst1 * (fConst199 - 2.62354210174893e-28)) - 6.32839452326887e-25)))));
+	fConst260 = ((fConst42 * (6.13594910774543e-25 + (fConst1 * (2.45636211390993e-28 - fConst201)))) - 4.81336322736286e-20);
+	fConst261 = (fConst42 * ((fConst1 * (fConst203 - 2.12806894928757e-27)) - 3.90436158302686e-24));
+	fConst262 = (4.81336322736286e-20 + (fConst42 * (3.29076667225232e-24 + (fConst1 * (1.88243273789657e-27 - fConst205)))));
+	fConst263 = (fConst1 * ((fConst42 * (3.97506737997131e-24 + (fConst1 * (2.27290423453708e-27 - fConst207)))) - 4.65509016185963e-20));
+	fConst264 = ((fConst1 * ((fConst42 * ((fConst1 * (fConst209 - 2.01055002436219e-27)) - 3.34222792764443e-24)) - 3.44371487986018e-20)) - 4.65509016185963e-18);
+	fConst265 = (1.16377254046491e-18 + (fConst1 * (4.0494025208599e-20 + (fConst1 * (3.55031486822181e-22 + (fConst1 * (3.16419726163444e-25 + (fConst1 * (6.55885525437233e-29 - fConst118)))))))));
+	fConst266 = (fConst1 * (4.81336322736286e-22 + (fConst1 * (1.95218079151343e-24 + (fConst1 * (5.32017237321892e-28 - fConst122))))));
+	fConst267 = (2.40668161368143e-20 + (fConst1 * ((fConst1 * ((fConst1 * (fConst124 - 4.70608184474143e-28)) - 1.64538333612616e-24)) - 1.41621639131778e-22)));
+	fConst268 = ((fConst1 * ((fConst1 * ((fConst1 * (fConst120 - 6.14090528477483e-29)) - 3.06797455387272e-25)) - 3.39714683604509e-22)) - 2.40668161368143e-20);
+	fConst269 = (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (fConst126 - 5.6822605863427e-28)) - 1.98753368998566e-24)) - 5.75735780739837e-22)) - 2.32754508092981e-20));
+	fConst270 = ((fConst1 * ((fConst1 * (2.20704293917657e-22 + (fConst1 * (1.67111396382221e-24 + (fConst1 * (5.02637506090546e-28 - fConst128)))))) - 1.72185743993009e-20)) - 1.16377254046491e-18);
+	fConst271 = (2.35432599805571e-10 * fConst1);
+	fConst272 = (fConst1 * (3.95835848142153e-05 + fConst271));
+	fConst273 = (0 - (4.70865199611141e-10 * fConst42));
+	fConst274 = (fConst1 * (fConst271 - 3.95835848142153e-05));
+	fConst275 = (7.61136585018504e-32 * fConst1);
+	fConst276 = ((fConst1 * (1.54695224812832e-17 + (fConst42 * (7.32488014122897e-21 + (fConst1 * (0 - (3.82729245593221e-25 + fConst275))))))) - 6.05835093424096e-16);
+	fConst277 = (2.39262841570727e-31 * fConst1);
+	fConst278 = ((fConst1 * (3.31891148609028e-32 + (fConst42 * (2.7286345116429e-20 + (fConst1 * (0 - (1.82261566152054e-23 + fConst277))))))) - 1.2888977955445e-30);
+	fConst279 = (1.11676404845819e-31 * fConst1);
+	fConst280 = ((fConst42 * ((fConst1 * (2.44009843633683e-23 + fConst279)) - 1.96606357975003e-20)) - 6.61146583932057e-48);
+	fConst281 = (2.60875189351624e-19 + (fConst42 * ((fConst1 * (0 - (2.44009204730374e-23 + fConst279))) - 2.49566107730556e-23)));
+	fConst282 = (1.10748289620665e-31 * fConst1);
+	fConst283 = (6.61146583932057e-48 + (fConst42 * ((fConst1 * (1.61120746095049e-26 - fConst282)) - 1.78759975574757e-23)));
+	fConst284 = ((fConst42 * (1.96963877926153e-20 + (fConst1 * (fConst282 - 1.61110772795832e-26)))) - 6.61146583932057e-48);
+	fConst285 = (2.39032787477683e-31 * fConst1);
+	fConst286 = (1.2888977955445e-30 + (fConst1 * ((fConst42 * ((fConst1 * (1.21738014006249e-23 + fConst285)) - 2.10292427930658e-20)) - 1.30437594675845e-19)));
+	fConst287 = (2.5677288147206e-31 * fConst1);
+	fConst288 = (6.44448897807416e-31 + (fConst1 * ((fConst42 * ((fConst1 * (4.82031108570165e-25 + fConst287)) - 3.77146842732817e-22)) - 4.43487821897763e-18)));
+	fConst289 = ((fConst1 * (4.30444062430181e-18 + (fConst42 * ((fConst1 * (0 - (4.82063574071825e-25 + fConst287))) - 4.69123728113195e-23)))) - 6.44448897807416e-31);
+	fConst290 = (1.90284146254626e-31 * fConst1);
+	fConst291 = ((fConst1 * ((fConst1 * ((fConst1 * (3.66244007061449e-21 + (fConst1 * (4.78411556991526e-25 + fConst290)))) - 3.49583232264895e-17)) - 7.73476124064158e-18)) - 7.5729386678012e-16);
+	fConst292 = (5.98157103926817e-31 * fConst1);
+	fConst293 = ((fConst1 * ((fConst1 * (2.15574212705131e-21 + (fConst1 * (1.36431725582145e-20 + (fConst1 * (2.27826957690067e-23 + fConst292)))))) - 1.65945574304514e-32)) - 1.61112224443063e-30);
+	fConst294 = (2.79191012114547e-31 * fConst1);
+	fConst295 = (3.30573291966029e-48 + (fConst1 * ((fConst1 * ((fConst1 * (0 - (3.05012304542104e-23 + fConst294))) - 9.83031789875016e-21)) - 1.38500839080866e-34)));
+	fConst296 = ((fConst1 * (1.57673596144215e-20 + (fConst1 * ((fConst1 * (3.05011505912968e-23 + fConst294)) - 1.24783053865278e-23)))) - 1.30437594675812e-19);
+	fConst297 = (2.76870724051662e-31 * fConst1);
+	fConst298 = ((fConst1 * (1.38500839080866e-34 + (fConst1 * ((fConst1 * (fConst297 - 2.01400932618811e-26)) - 8.93799877873786e-24)))) - 3.30573291966029e-48);
+	fConst299 = (3.30573291966029e-48 + (fConst1 * ((fConst1 * (9.84819389630763e-21 + (fConst1 * (2.01388465994789e-26 - fConst297)))) - 1.45976001917383e-31)));
+	fConst300 = (5.97581968694209e-31 * fConst1);
+	fConst301 = (1.61112224443063e-30 + (fConst1 * (6.52187973379226e-20 + (fConst1 * ((fConst1 * ((fConst1 * (0 - (1.52172517507811e-23 + fConst300))) - 1.05146213965329e-20)) - 1.00394219341891e-20)))));
+	fConst302 = (6.41932203680151e-31 * fConst1);
+	fConst303 = (8.0556112225927e-31 + (fConst1 * (2.21743910948881e-18 + (fConst1 * ((fConst1 * ((fConst1 * (0 - (6.02538885712707e-25 + fConst302))) - 1.88573421366408e-22)) - 4.55611244465951e-20)))));
+	fConst304 = ((fConst1 * ((fConst1 * (3.27758082037328e-17 + (fConst1 * ((fConst1 * (6.02579467589781e-25 + fConst302)) - 2.34561864056598e-23)))) - 2.15222031215091e-18)) - 8.0556112225927e-31);
+	fConst305 = ((fConst42 * (0 - (1.46497602824579e-20 + (2.53712195006168e-31 * fConst42)))) - 3.09390449625663e-17);
+	fConst306 = ((fConst42 * (0 - (5.45726902328579e-20 + (7.97542805235757e-31 * fConst42)))) - 6.63782297218055e-32);
+	fConst307 = (2.60875189351691e-19 + (fConst42 * (4.20584855861316e-20 + (7.96775958258945e-31 * fConst42))));
+	fConst308 = (3.69160965402215e-31 * fConst42);
+	fConst309 = ((fConst42 * (3.57519951149514e-23 - fConst308)) - 1.32229316786411e-47);
+	fConst310 = (1.32229316786411e-47 + (fConst42 * (fConst308 - 3.93927755852305e-20)));
+	fConst311 = (3.72254682819396e-31 * fConst42);
+	fConst312 = (1.32229316786411e-47 + (fConst42 * (3.93212715950006e-20 + fConst311)));
+	fConst313 = ((fConst42 * (4.99132215461111e-23 - fConst311)) - 5.21750378703248e-19);
+	fConst314 = (8.55909604906868e-31 * fConst42);
+	fConst315 = (8.86975643795525e-18 + (fConst42 * (7.54293685465634e-22 + fConst314)));
+	fConst316 = ((fConst42 * (9.3824745622639e-23 - fConst314)) - 8.60888124860363e-18);
+	fConst317 = (7.5729386678012e-16 + (fConst1 * ((fConst1 * (3.49583232264895e-17 + (fConst1 * (3.66244007061449e-21 + (fConst1 * (fConst290 - 4.78411556991526e-25)))))) - 7.73476124064158e-18)));
+	fConst318 = (1.61112224443063e-30 + (fConst1 * ((fConst1 * ((fConst1 * (1.36431725582145e-20 + (fConst1 * (fConst292 - 2.27826957690067e-23)))) - 2.15574212705131e-21)) - 1.65945574304514e-32)));
+	fConst319 = (3.30573291966029e-48 + (fConst1 * (1.38500839080866e-34 + (fConst1 * ((fConst1 * (3.05012304542104e-23 - fConst294)) - 9.83031789875016e-21)))));
+	fConst320 = ((fConst1 * ((fConst1 * ((fConst1 * (fConst294 - 3.05011505912968e-23)) - 1.24783053865278e-23)) - 1.57673596144215e-20)) - 1.30437594675812e-19);
+	fConst321 = ((fConst1 * ((fConst1 * ((fConst1 * (2.01400932618811e-26 + fConst297)) - 8.93799877873786e-24)) - 1.38500839080866e-34)) - 3.30573291966029e-48);
+	fConst322 = (3.30573291966029e-48 + (fConst1 * (1.45976001917383e-31 + (fConst1 * (9.84819389630763e-21 + (fConst1 * (0 - (2.01388465994789e-26 + fConst297))))))));
+	fConst323 = ((fConst1 * (6.52187973379226e-20 + (fConst1 * (1.00394219341891e-20 + (fConst1 * ((fConst1 * (1.52172517507811e-23 - fConst300)) - 1.05146213965329e-20)))))) - 1.61112224443063e-30);
+	fConst324 = ((fConst1 * (2.21743910948881e-18 + (fConst1 * (4.55611244465951e-20 + (fConst1 * ((fConst1 * (6.02538885712707e-25 - fConst302)) - 1.88573421366408e-22)))))) - 8.0556112225927e-31);
+	fConst325 = (8.0556112225927e-31 + (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (fConst302 - 6.02579467589781e-25)) - 2.34561864056598e-23)) - 3.27758082037328e-17)) - 2.15222031215091e-18)));
+	fConst326 = (6.05835093424096e-16 + (fConst1 * (1.54695224812832e-17 + (fConst42 * (7.32488014122897e-21 + (fConst1 * (3.82729245593221e-25 - fConst275)))))));
+	fConst327 = (1.2888977955445e-30 + (fConst1 * (3.31891148609028e-32 + (fConst42 * (2.7286345116429e-20 + (fConst1 * (1.82261566152054e-23 - fConst277)))))));
+	fConst328 = ((fConst42 * ((fConst1 * (fConst279 - 2.44009843633683e-23)) - 1.96606357975003e-20)) - 6.61146583932057e-48);
+	fConst329 = (2.60875189351624e-19 + (fConst42 * ((fConst1 * (2.44009204730374e-23 - fConst279)) - 2.49566107730556e-23)));
+	fConst330 = (6.61146583932057e-48 + (fConst42 * ((fConst1 * (0 - (1.61120746095049e-26 + fConst282))) - 1.78759975574757e-23)));
+	fConst331 = ((fConst42 * (1.96963877926153e-20 + (fConst1 * (1.61110772795832e-26 + fConst282)))) - 6.61146583932057e-48);
+	fConst332 = ((fConst1 * ((fConst42 * ((fConst1 * (fConst285 - 1.21738014006249e-23)) - 2.10292427930658e-20)) - 1.30437594675845e-19)) - 1.2888977955445e-30);
+	fConst333 = ((fConst1 * ((fConst42 * ((fConst1 * (fConst287 - 4.82031108570165e-25)) - 3.77146842732817e-22)) - 4.43487821897763e-18)) - 6.44448897807416e-31);
+	fConst334 = (6.44448897807416e-31 + (fConst1 * (4.30444062430181e-18 + (fConst42 * ((fConst1 * (4.82063574071825e-25 - fConst287)) - 4.69123728113195e-23)))));
+	fConst335 = (1.51458773356024e-16 + (fConst1 * (7.73476124064158e-18 + (fConst1 * ((fConst1 * ((fConst1 * (fConst17 - 9.56823113983053e-26)) - 3.66244007061449e-21)) - 1.16527744088298e-17)))));
+	fConst336 = (3.22224448886125e-31 + (fConst1 * (1.65945574304514e-32 + (fConst1 * (7.18580709017103e-22 + (fConst1 * ((fConst1 * (fConst19 - 4.55653915380135e-24)) - 1.36431725582145e-20)))))));
+	fConst337 = ((fConst1 * ((fConst1 * (9.83031789875016e-21 + (fConst1 * (6.10024609084207e-24 - fConst21)))) - 4.61669463602886e-35)) - 3.30573291966029e-48);
+	fConst338 = (1.30437594675812e-19 + (fConst1 * (5.25578653814051e-21 + (fConst1 * (1.24783053865278e-23 + (fConst1 * (fConst21 - 6.10023011825936e-24)))))));
+	fConst339 = (3.30573291966029e-48 + (fConst1 * (4.61669463602886e-35 + (fConst1 * (8.93799877873786e-24 + (fConst1 * (4.02801865237622e-27 + fConst24)))))));
+	fConst340 = ((fConst1 * ((fConst1 * ((fConst1 * (0 - (4.02776931989579e-27 + fConst24))) - 9.84819389630763e-21)) - 4.86586673057942e-32)) - 3.30573291966029e-48);
+	fConst341 = ((fConst1 * ((fConst1 * ((fConst1 * (1.05146213965329e-20 + (fConst1 * (3.04345035015622e-24 - fConst27)))) - 3.34647397806303e-21)) - 6.52187973379226e-20)) - 3.22224448886125e-31);
+	fConst342 = ((fConst1 * ((fConst1 * ((fConst1 * (1.88573421366408e-22 + (fConst1 * (1.20507777142541e-25 - fConst29)))) - 1.51870414821984e-20)) - 2.21743910948881e-18)) - 1.61112224451854e-31);
+	fConst343 = (1.61112224451854e-31 + (fConst1 * (2.15222031215091e-18 + (fConst1 * (1.09252694012443e-17 + (fConst1 * (2.34561864056598e-23 + (fConst1 * (fConst29 - 1.20515893517956e-25)))))))));
+	fConst344 = (3.2994570111895e-44 * fConst1);
+	fConst345 = (1.965162575555e-11 + (fConst1 * ((fConst1 * (1.56820141332437e-15 + (fConst1 * ((fConst1 * (7.24921220605453e-22 + (fConst1 * ((fConst1 * (2.92933985676268e-29 + (fConst1 * ((fConst1 * (5.53932651773327e-39 - fConst344)) - 5.39943887051256e-34)))) - 4.71020790798528e-25)))) - 1.33662641707101e-18)))) - 4.54965157083591e-13)));
+	fConst346 = (2.96951131007055e-43 * fConst1);
+	fConst347 = (1.7686463179995e-10 + (fConst1 * ((fConst1 * (7.84100706662183e-15 + (fConst1 * ((fConst1 * (7.24921220605453e-22 + (fConst1 * (4.71020790798528e-25 + (fConst1 * ((fConst1 * (2.69971943525628e-33 + (fConst1 * (fConst346 - 3.87752856241329e-38)))) - 8.78801957028804e-29)))))) - 4.00987925121303e-18)))) - 3.18475609958514e-12)));
+	fConst348 = (1.18780452402822e-42 * fConst1);
+	fConst349 = (7.07458527199799e-10 + (fConst1 * ((fConst1 * (1.25456113065949e-14 + (fConst42 * ((fConst1 * (1.88408316319411e-24 + (fConst42 * ((fConst1 * (1.10786530354665e-37 - fConst348)) - 4.31955109641004e-33)))) - 2.89968488242181e-21)))) - 9.09930314167182e-12)));
+	fConst350 = (2.77154388939918e-42 * fConst1);
+	fConst351 = (1.6507365634662e-09 + (fConst1 * ((fConst42 * (1.06930113365681e-17 + (fConst1 * ((fConst1 * ((fConst1 * (2.34347188541014e-28 + (fConst42 * (fConst350 - 1.55101142496532e-37)))) - 1.88408316319411e-24)) - 2.89968488242181e-21)))) - 1.27390243983405e-11)));
+	fConst352 = (4.15731583409877e-42 * fConst1);
+	fConst353 = (2.4761048451993e-09 + (fConst1 * ((fConst1 * ((fConst1 * (8.01975850242606e-18 + (fConst1 * (4.34952732363272e-21 + (fConst1 * ((fConst1 * ((fConst1 * (7.55921441871758e-33 + (fConst1 * (7.75505712482658e-38 - fConst352)))) - 1.75760391405761e-28)) - 2.82612474479117e-24)))))) - 2.19548197865411e-14)) - 6.36951219917027e-12)));
+	fConst354 = (2.4761048451993e-09 + (fConst1 * (6.36951219917027e-12 + (fConst1 * ((fConst1 * ((fConst1 * (4.34952732363272e-21 + (fConst1 * (2.82612474479117e-24 + (fConst1 * ((fConst1 * ((fConst1 * (7.75505712482658e-38 + fConst352)) - 7.55921441871758e-33)) - 1.75760391405761e-28)))))) - 8.01975850242606e-18)) - 2.19548197865411e-14)))));
+	fConst355 = (1.6507365634662e-09 + (fConst1 * (1.27390243983405e-11 + (fConst42 * ((fConst1 * ((fConst1 * (1.88408316319411e-24 + (fConst1 * (2.34347188541014e-28 + (fConst42 * (0 - (1.55101142496532e-37 + fConst350))))))) - 2.89968488242181e-21)) - 1.06930113365681e-17)))));
+	fConst356 = (7.07458527199799e-10 + (fConst1 * (9.09930314167182e-12 + (fConst1 * (1.25456113065949e-14 + (fConst42 * ((fConst1 * ((fConst42 * (4.31955109641004e-33 + (fConst1 * (1.10786530354665e-37 + fConst348)))) - 1.88408316319411e-24)) - 2.89968488242181e-21)))))));
+	fConst357 = (1.7686463179995e-10 + (fConst1 * (3.18475609958514e-12 + (fConst1 * (7.84100706662183e-15 + (fConst1 * (4.00987925121303e-18 + (fConst1 * (7.24921220605453e-22 + (fConst1 * ((fConst1 * ((fConst1 * ((fConst1 * (0 - (3.87752856241329e-38 + fConst346))) - 2.69971943525628e-33)) - 8.78801957028804e-29)) - 4.71020790798528e-25)))))))))));
+	fConst358 = (1.965162575555e-11 + (fConst1 * (4.54965157083591e-13 + (fConst1 * (1.56820141332437e-15 + (fConst1 * (1.33662641707101e-18 + (fConst1 * (7.24921220605453e-22 + (fConst1 * (4.71020790798528e-25 + (fConst1 * (2.92933985676268e-29 + (fConst1 * (5.39943887051256e-34 + (fConst1 * (5.53932651773327e-39 + fConst344)))))))))))))))));
+	fConst359 = (1.0 / fConst358);
+	fConst360 = (4.33054407650898e-10 * fConst1);
+	fConst361 = (1.22474303201741e-06 + (fConst1 * (fConst360 - 4.66962506103765e-08)));
+	fConst362 = (2.44948606403482e-06 - (8.66108815301797e-10 * fConst42));
+	fConst363 = (1.0 / (1.22474303201741e-06 + (fConst1 * (4.66962506103765e-08 + fConst360))));
+	fConst364 = (0 - (1.8228725842454359e-09 * fConst42));
+	fConst365 = (3.6457451684908805e-09 * fConst42);
+	fConst366 = (2.57842436032791e-36 * fConst1);
+	fConst367 = ((fConst1 * (5.04502665280667e-16 + (fConst1 * ((fConst1 * (2.08441605187173e-22 + (fConst1 * ((fConst1 * (8.60892005839271e-32 - fConst366)) - 9.79448180087853e-27)))) - 9.76565695300569e-20)))) - 1.67475323755367e-13);
+	fConst368 = (1.28921218016396e-35 * fConst1);
+	fConst369 = ((fConst1 * (2.52251332640334e-15 + (fConst1 * ((fConst1 * (2.08441605187173e-22 + (fConst1 * (9.79448180087853e-27 + (fConst1 * (fConst368 - 2.58267601751781e-31)))))) - 2.92969708590171e-19)))) - 1.17232726628757e-12);
+	fConst370 = (2.06273948826233e-35 * fConst42);
+	fConst371 = ((fConst1 * (4.03602132224534e-15 + (fConst42 * ((fConst1 * (3.91779272035141e-26 - fConst370)) - 8.33766420748692e-22)))) - 3.34950647510734e-12);
+	fConst372 = (6.88713604671417e-31 * fConst1);
+	fConst373 = ((fConst42 * (7.81252556240455e-19 + (fConst1 * ((fConst1 * (fConst372 - 3.91779272035141e-26)) - 8.33766420748692e-22)))) - 4.68930906515027e-12);
+	fConst374 = (3.60979410445908e-35 * fConst1);
+	fConst375 = ((fConst1 * ((fConst1 * (5.85939417180341e-19 + (fConst1 * (1.25064963112304e-21 + (fConst1 * ((fConst1 * (fConst374 - 5.16535203503562e-31)) - 5.87668908052712e-26)))))) - 7.06303731392934e-15)) - 2.34465453257514e-12);
+	fConst376 = (2.34465453257514e-12 + (fConst1 * ((fConst1 * ((fConst1 * (1.25064963112304e-21 + (fConst1 * (5.87668908052712e-26 + (fConst1 * (0 - (5.16535203503562e-31 + fConst374))))))) - 5.85939417180341e-19)) - 7.06303731392934e-15)));
+	fConst377 = (4.68930906515027e-12 + (fConst42 * ((fConst1 * ((fConst1 * (3.91779272035141e-26 + fConst372)) - 8.33766420748692e-22)) - 7.81252556240455e-19)));
+	fConst378 = (3.34950647510734e-12 + (fConst1 * (4.03602132224534e-15 + (fConst42 * ((fConst1 * (fConst370 - 3.91779272035141e-26)) - 8.33766420748692e-22)))));
+	fConst379 = (1.17232726628757e-12 + (fConst1 * (2.52251332640334e-15 + (fConst1 * (2.92969708590171e-19 + (fConst1 * (2.08441605187173e-22 + (fConst1 * ((fConst1 * (0 - (2.58267601751781e-31 + fConst368))) - 9.79448180087853e-27)))))))));
+	fConst380 = (1.67475323755367e-13 + (fConst1 * (5.04502665280667e-16 + (fConst1 * (9.76565695300569e-20 + (fConst1 * (2.08441605187173e-22 + (fConst1 * (9.79448180087853e-27 + (fConst1 * (8.60892005839271e-32 + fConst366)))))))))));
+	fConst381 = (fConst1 / fConst358);
+	clear_state_f();
+}
+
+void Dsp::init_static(uint32_t samplingFreq, PluginLV2 *p)
+{
+	static_cast<Dsp*>(p)->init(samplingFreq);
+}
+
+void always_inline Dsp::compute(int count, FAUSTFLOAT *input0, FAUSTFLOAT *output0)
+{
+#define fslider0 (*fslider0_)
+#define fslider1 (*fslider1_)
+#define fslider2 (*fslider2_)
+#define fslider3 (*fslider3_)
+#define fslider4 (*fslider4_)
+	double 	fSlow0 = (0.007000000000000006 * (1 - double(fslider0)));
+	double 	fSlow1 = (0.007000000000000006 * double(fslider1));
+	double 	fSlow2 = (0.007000000000000006 * (1 - double(fslider2)));
+	double 	fSlow3 = (0.007000000000000006 * (1 - double(fslider3)));
+	int 	iSlow4 = int(double(fslider4));
+	for (int i=0; i<count; i++) {
+		fRec0[0] = ((0.993 * fRec0[1]) + fSlow0);
+		fRec1[0] = ((0.993 * fRec1[1]) + fSlow1);
+		double fTemp0 = (((fRec0[0] * ((fConst16 * fRec0[0]) + fConst15)) + (fRec1[0] * (((fRec0[0] * ((fConst13 * fRec0[0]) + fConst12)) + (fRec1[0] * ((fRec0[0] * ((fConst10 * fRec0[0]) + fConst9)) + fConst7))) + fConst5))) + fConst3);
+		fRec6[0] = ((0.993 * fRec6[1]) + fSlow2);
+		fRec7[0] = ((0.993 * fRec7[1]) + fSlow3);
+		double fTemp1 = (1.25571983620331e-15 + (fConst1 * (((fRec7[0] * (fConst117 + (fConst1 * (fRec6[0] * (fConst115 + (fConst113 * fRec6[0])))))) + (fRec6[0] * (fConst111 + (fConst109 * fRec6[0])))) + fConst107)));
+		double fTemp2 = (double)input0[i];
+		fVec0[0] = fTemp2;
+		fRec9[0] = (fConst198 * ((fVec0[0] - fVec0[1]) + (fConst197 * fRec9[1])));
+		fRec8[0] = (fRec9[0] - (((((((((fRec8[1] * (1.00457586896265e-14 + (fConst1 * (((fRec7[0] * (fConst195 + (fConst1 * (fRec6[0] * (fConst194 + (fConst193 * fRec6[0])))))) + (fRec6[0] * (fConst192 + (fConst191 * fRec6[0])))) + fConst190)))) + (fRec8[2] * (3.51601554136928e-14 + (fConst1 * (((fRec7[0] * (fConst189 + (fConst1 * (fRec6[0] * (fConst188 + (fConst187 * fRec6[0])))))) + (fRec6[0] * (fConst186 + (fConst185 * fRec6[0])))) + fConst184))))) + (fRec8[3] * (7.03203108273855e-14 + (fConst1 * (((fRec7[0] * (fConst183 + (fConst1 * (fRec6[0] * (fConst182 + (fConst181 * fRec6[0])))))) + (fRec6[0] * (fConst180 + (fConst179 * fRec6[0])))) + fConst178))))) + (fRec8[4] * (8.79003885342319e-14 + (fConst42 * (((fRec7[0] * ((fRec6[0] * (fConst177 + (fConst176 * fRec6[0]))) + fConst175)) + (fRec6[0] * (fConst174 + (fConst173 * fRec6[0])))) + fConst172))))) + (fRec8[5] * (7.03203108273855e-14 + (fConst1 * (((fRec7[0] * (fConst171 + (fConst1 * (fRec6[0] * (fConst169 + (fConst167 * fRec6[0])))))) + (fRec6[0] * (fConst165 + (fConst163 * fRec6[0])))) + fConst161))))) + (fRec8[6] * (3.51601554136928e-14 + (fConst1 * (((fRec7[0] * (fConst159 + (fConst1 * (fRec6[0] * (fConst157 + (fConst155 * fRec6[0])))))) + (fRec6[0] * (fConst153 + (fConst151 * fRec6[0])))) + fConst149))))) + (fRec8[7] * (1.00457586896265e-14 + (fConst1 * (((fRec7[0] * (fConst147 + (fConst1 * (fRec6[0] * (fConst145 + (fConst143 * fRec6[0])))))) + (fRec6[0] * (fConst141 + (fConst139 * fRec6[0])))) + fConst137))))) + (fRec8[8] * (1.25571983620331e-15 + (fConst1 * (((fRec7[0] * (fConst135 + (fConst1 * (fRec6[0] * (fConst134 + (fConst133 * fRec6[0])))))) + (fRec6[0] * (fConst132 + (fConst131 * fRec6[0])))) + fConst130))))) / fTemp1));
+		double fTemp3 = ((((((((((fRec8[0] * (((fRec6[0] * (fConst270 + (fConst269 * fRec6[0]))) + (fConst1 * (fRec7[0] * (fConst268 + (fRec6[0] * (fConst267 + (fConst266 * fRec6[0]))))))) + fConst265)) + (fRec8[1] * (((fRec6[0] * (fConst264 + (fConst263 * fRec6[0]))) + (fConst1 * (fRec7[0] * ((fRec6[0] * (fConst262 + (fConst261 * fRec6[0]))) + fConst260)))) + fConst259))) + (fRec8[2] * (((fRec6[0] * (fConst258 + (fConst257 * fRec6[0]))) + (fConst1 * (fRec7[0] * ((fRec6[0] * (fConst256 + (fConst255 * fRec6[0]))) + fConst254)))) + fConst253))) + (fRec8[3] * (((fRec6[0] * (fConst252 + (fConst251 * fRec6[0]))) + (fConst1 * (fRec7[0] * ((fRec6[0] * (fConst250 + (fConst249 * fRec6[0]))) + fConst248)))) + fConst247))) + (fRec8[4] * (((fRec6[0] * (fConst246 + (fConst245 * fRec6[0]))) + (fConst42 * (fRec7[0] * (fConst244 + (fRec6[0] * (fConst243 + (fConst242 * fRec6[0]))))))) + fConst241))) + (fRec8[5] * (((fRec6[0] * (fConst240 + (fConst238 * fRec6[0]))) + (fConst1 * (fRec7[0] * ((fRec6[0] * (fConst236 + (fConst234 * fRec6[0]))) + fConst232)))) + fConst230))) + (fRec8[6] * (((fRec6[0] * (fConst228 + (fConst225 * fRec6[0]))) + (fConst1 * (fRec7[0] * ((fRec6[0] * (fConst222 + (fConst219 * fRec6[0]))) + fConst216)))) + fConst213))) + (fRec8[7] * (((fRec6[0] * (fConst210 + (fConst208 * fRec6[0]))) + (fConst1 * (fRec7[0] * ((fRec6[0] * (fConst206 + (fConst204 * fRec6[0]))) + fConst202)))) + fConst200))) + (fRec8[8] * (((fRec6[0] * (fConst129 + (fConst127 * fRec6[0]))) + (fConst1 * (fRec7[0] * ((fRec6[0] * (fConst125 + (fConst123 * fRec6[0]))) + fConst121)))) + fConst119))) / fTemp1);
+		fVec1[0] = fTemp3;
+		fRec5[0] = (fConst198 * ((fConst197 * fRec5[1]) + (fConst42 * (fVec1[0] - fVec1[1]))));
+		fRec4[0] = (fRec5[0] - (fConst105 * ((fConst104 * fRec4[1]) + (fConst103 * fRec4[2]))));
+		double fTemp4 = (((fConst274 * fRec4[0]) + (fConst273 * fRec4[1])) + (fConst272 * fRec4[2]));
+		fVec2[0] = fTemp4;
+		fRec3[0] = (fConst198 * ((fConst197 * fRec3[1]) + (fConst105 * (fVec2[0] - fVec2[1]))));
+		fRec2[0] = (fRec3[0] - (((((((fRec2[1] * (((fRec0[0] * ((fConst101 * fRec0[0]) + fConst100)) + (fRec1[0] * (((fRec0[0] * ((fConst99 * fRec0[0]) + fConst98)) + (fRec1[0] * ((fRec0[0] * ((fConst97 * fRec0[0]) + fConst96)) + fConst95))) + fConst94))) + fConst93)) + (fRec2[2] * (((fRec0[0] * ((fConst92 * fRec0[0]) + fConst91)) + (fRec1[0] * (((fRec0[0] * ((fConst90 * fRec0[0]) + fConst89)) + (fRec1[0] * ((fRec0[0] * ((fConst88 * fRec0[0]) + fConst87)) + fConst86))) + fConst85))) + fConst84))) + (fRec2[3] * (((fRec0[0] * ((fConst83 * fRec0[0]) + fConst82)) + (fRec1[0] * (((fRec0[0] * ((fConst80 * fRec0[0]) + fConst79)) + (fRec1[0] * ((fRec0[0] * ((fConst77 * fRec0[0]) + fConst76)) + fConst74))) + fConst73))) + fConst72))) + (fRec2[4] * (((fRec0[0] * ((fConst71 * fRec0[0]) + fConst70)) + (fRec1[0] * (((fRec0[0] * ((fConst68 * fRec0[0]) + fConst67)) + (fRec1[0] * ((fRec0[0] * ((fConst65 * fRec0[0]) + fConst64)) + fConst62))) + fConst60))) + fConst58))) + (fRec2[5] * (((fRec0[0] * ((fConst56 * fRec0[0]) + fConst55)) + (fRec1[0] * (((fRec0[0] * ((fConst53 * fRec0[0]) + fConst52)) + (fRec1[0] * ((fRec0[0] * ((fConst50 * fRec0[0]) + fConst49)) + fConst47))) + fConst45))) + fConst43))) + (fRec2[6] * (((fRec0[0] * ((fConst40 * fRec0[0]) + fConst39)) + (fRec1[0] * (((fRec0[0] * ((fConst38 * fRec0[0]) + fConst37)) + (fRec1[0] * ((fRec0[0] * ((fConst36 * fRec0[0]) + fConst35)) + fConst34))) + fConst33))) + fConst32))) / fTemp0));
+		double fTemp5 = ((((((((fRec2[0] * (((fRec0[0] * (fConst343 + (fConst342 * fRec0[0]))) + (fRec1[0] * (((fRec1[0] * (fConst341 + (fConst1 * (fRec0[0] * (fConst340 + (fConst339 * fRec0[0])))))) + (fConst1 * (fRec0[0] * (fConst338 + (fConst337 * fRec0[0]))))) + fConst336))) + fConst335)) + (fRec2[1] * (((fRec0[0] * (fConst334 + (fConst333 * fRec0[0]))) + (fRec1[0] * (((fRec1[0] * (fConst332 + (fConst1 * (fRec0[0] * (fConst331 + (fConst330 * fRec0[0])))))) + (fConst1 * (fRec0[0] * (fConst329 + (fConst328 * fRec0[0]))))) + fConst327))) + fConst326))) + (fRec2[2] * (((fRec0[0] * (fConst325 + (fConst324 * fRec0[0]))) + (fRec1[0] * (((fRec1[0] * (fConst323 + (fConst1 * (fRec0[0] * (fConst322 + (fConst321 * fRec0[0])))))) + (fConst1 * (fRec0[0] * (fConst320 + (fConst319 * fRec0[0]))))) + fConst318))) + fConst317))) + (fConst1 * (fRec2[3] * (((fRec0[0] * (fConst316 + (fConst315 * fRec0[0]))) + (fRec1[0] * (((fRec0[0] * (fConst313 + (fConst312 * fRec0[0]))) + (fRec1[0] * ((fRec0[0] * (fConst310 + (fConst309 * fRec0[0]))) + fConst307))) + fConst306))) + fConst305)))) + (fRec2[4] * (((fRec0[0] * (fConst304 + (fConst303 * fRec0[0]))) + (fRec1[0] * (((fRec1[0] * (fConst301 + (fConst1 * (fRec0[0] * (fConst299 + (fConst298 * fRec0[0])))))) + (fConst1 * (fRec0[0] * (fConst296 + (fConst295 * fRec0[0]))))) + fConst293))) + fConst291))) + (fRec2[5] * (((fRec0[0] * (fConst289 + (fConst288 * fRec0[0]))) + (fRec1[0] * (((fRec1[0] * (fConst286 + (fConst1 * (fRec0[0] * (fConst284 + (fConst283 * fRec0[0])))))) + (fConst1 * (fRec0[0] * (fConst281 + (fConst280 * fRec0[0]))))) + fConst278))) + fConst276))) + (fRec2[6] * (((fRec0[0] * (fConst31 + (fConst30 * fRec0[0]))) + (fRec1[0] * (((fRec1[0] * (fConst28 + (fConst1 * (fRec0[0] * (fConst26 + (fConst25 * fRec0[0])))))) + (fConst1 * (fRec0[0] * (fConst23 + (fConst22 * fRec0[0]))))) + fConst20))) + fConst18))) / fTemp0);
+		fVec3[0] = fTemp5;
+		fRec13[0] = (fConst198 * ((fConst197 * fRec13[1]) + (fConst1 * (fVec3[0] - fVec3[1]))));
+		fRec12[0] = (fRec13[0] - (fConst363 * ((fConst362 * fRec12[1]) + (fConst361 * fRec12[2]))));
+		double fTemp6 = (((fConst364 * fRec12[0]) + (fConst365 * fRec12[1])) + (fConst364 * fRec12[2]));
+		fVec4[0] = fTemp6;
+		fRec11[0] = (fConst198 * ((fConst197 * fRec11[1]) + (fConst363 * (fVec4[0] - fVec4[1]))));
+		fRec10[0] = (fRec11[0] - (fConst359 * (((((((((fConst357 * fRec10[1]) + (fConst356 * fRec10[2])) + (fConst355 * fRec10[3])) + (fConst354 * fRec10[4])) + (fConst353 * fRec10[5])) + (fConst351 * fRec10[6])) + (fConst349 * fRec10[7])) + (fConst347 * fRec10[8])) + (fConst345 * fRec10[9]))));
+		output0[i] = (FAUSTFLOAT)((iSlow4)?(fConst381 * ((((((((((fConst380 * fRec10[0]) + (fConst379 * fRec10[1])) + (fConst378 * fRec10[2])) + (fConst377 * fRec10[3])) + (fConst376 * fRec10[4])) + (fConst375 * fRec10[5])) + (fConst373 * fRec10[6])) + (fConst371 * fRec10[7])) + (fConst369 * fRec10[8])) + (fConst367 * fRec10[9]))):(fConst1 * fVec3[0]));
+		// post processing
+		for (int i=9; i>0; i--) fRec10[i] = fRec10[i-1];
+		fRec11[1] = fRec11[0];
+		fVec4[1] = fVec4[0];
+		fRec12[2] = fRec12[1]; fRec12[1] = fRec12[0];
+		fRec13[1] = fRec13[0];
+		fVec3[1] = fVec3[0];
+		for (int i=6; i>0; i--) fRec2[i] = fRec2[i-1];
+		fRec3[1] = fRec3[0];
+		fVec2[1] = fVec2[0];
+		fRec4[2] = fRec4[1]; fRec4[1] = fRec4[0];
+		fRec5[1] = fRec5[0];
+		fVec1[1] = fVec1[0];
+		for (int i=8; i>0; i--) fRec8[i] = fRec8[i-1];
+		fRec9[1] = fRec9[0];
+		fVec0[1] = fVec0[0];
+		fRec7[1] = fRec7[0];
+		fRec6[1] = fRec6[0];
+		fRec1[1] = fRec1[0];
+		fRec0[1] = fRec0[0];
+	}
+#undef fslider0
+#undef fslider1
+#undef fslider2
+#undef fslider3
+#undef fslider4
+}
+		
+void __rt_func Dsp::compute_static(int count, FAUSTFLOAT *input0, FAUSTFLOAT *output0, PluginLV2 *p)
+{
+	static_cast<Dsp*>(p)->compute(count, input0, output0);
+}
+
+
+void Dsp::connect(uint32_t port,void* data)
+{
+	switch ((PortIndex)port)
+	{
+	case BASS: 
+		fslider0_ = (float*)data; // , 0.5, 0.0, 1.0, 0.01 
+		break;
+	// static const value_pair fslider4_values[] = {{"ON"},{"OFF"},{0}};
+	case CAB: 
+		fslider4_ = (float*)data; // , 0.0, 0.0, 1.0, 1.0 
+		break;
+	case MID: 
+		fslider3_ = (float*)data; // , 0.5, 0.0, 1.0, 0.01 
+		break;
+	case TREBLE: 
+		fslider1_ = (float*)data; // , 0.5, 0.0, 1.0, 0.01 
+		break;
+	case VOLUME: 
+		fslider2_ = (float*)data; // , 0.5, 0.0, 1.0, 0.01 
+		break;
+	default:
+		break;
+	}
+}
+
+void Dsp::connect_static(uint32_t port,void* data, PluginLV2 *p)
+{
+	static_cast<Dsp*>(p)->connect(port, data);
+}
+
+
+PluginLV2 *plugin() {
+	return new Dsp();
+}
+
+void Dsp::del_instance(PluginLV2 *p)
+{
+	delete static_cast<Dsp*>(p);
+}
+
+/*
+typedef enum
+{
+   BASS, 
+   CAB, 
+   MID, 
+   TREBLE, 
+   VOLUME, 
+} PortIndex;
+*/
+
+} // end namespace voxbass

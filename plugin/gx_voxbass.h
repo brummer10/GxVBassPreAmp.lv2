@@ -25,18 +25,19 @@
 #include <lv2.h>
 
 #define GXPLUGIN_URI "http://guitarix.sourceforge.net/plugins/gx_voxbass_"
-#define GXPLUGIN_UI_URI "http://guitarix.sourceforge.net/plugins/gx_voxbass_gui"
+#define GXPLUGIN_UI_URI "http://guitarix.sourceforge.net/plugins/gx_voxbass_gui#_voxbass_"
 
 
 typedef enum
 {
    EFFECTS_OUTPUT,
    EFFECTS_INPUT,
+   BYPASS,
    BASS, 
+   CAB, 
    MID, 
    TREBLE, 
    VOLUME, 
-   CAB, 
 } PortIndex;
 
 #endif //SRC_HEADERS_GXEFFECTS_H_
