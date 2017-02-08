@@ -201,7 +201,7 @@ void Gx_voxbass_::run_dsp_(uint32_t n_samples)
     bypass_ = static_cast<uint32_t>(*(bypass));
     ramp_down = ramp_down_step;
     ramp_up = 0.0;    
-    if (bypass_) needs_ramp_down = true;
+    if (!bypass_) needs_ramp_down = true;
     else needs_ramp_up = true;
   }
   // check if raming is needed

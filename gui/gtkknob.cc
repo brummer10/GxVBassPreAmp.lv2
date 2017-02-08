@@ -233,11 +233,11 @@ static void knob_expose(GtkWidget *widget, int knob_x, int knob_y, GdkEventExpos
 		}
 		if (!sw_state) {
 		knob->pswitch_image = gdk_pixbuf_scale_simple(
-			knob->switch_on_image, allocation->width ,allocation->height, GDK_INTERP_NEAREST);
+			knob->switch_off_image, allocation->width ,allocation->height, GDK_INTERP_NEAREST);
 			//g_object_unref(knob->switch_on_image);
 		} else {
 		knob->pswitch_image = gdk_pixbuf_scale_simple(
-			knob->switch_off_image, allocation->width ,allocation->height, GDK_INTERP_NEAREST);
+			knob->switch_on_image, allocation->width ,allocation->height, GDK_INTERP_NEAREST);
 			//g_object_unref(knob->switch_off_image);
 			
 		}
