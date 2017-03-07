@@ -33,7 +33,7 @@
 	BUNDLE = $(NAME).lv2
 	VER = 0.1
 	# set compile flags
-	CXXFLAGS += -I. -I./dsp -I./plugin  -fPIC -DPIC -O2 -Wall -funroll-loops -ffast-math -fomit-frame-pointer -fstrength-reduce $(SSE_CFLAGS)
+	CXXFLAGS += -I. -I./dsp -I./dsp/zita-resampler-1.1.0 -I./dsp/zita-resampler-1.1.0/zita-resampler -I./plugin  -fPIC -DPIC -O2 -Wall -funroll-loops -ffast-math -fomit-frame-pointer -fstrength-reduce $(SSE_CFLAGS)
 	LDFLAGS += -I. -shared -lm 
 	GUI_LDFLAGS += -I./gui -shared -lm `pkg-config --cflags --libs gtk+-2.0`
 	# invoke build files
