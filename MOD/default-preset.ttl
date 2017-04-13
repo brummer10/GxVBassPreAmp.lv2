@@ -19,7 +19,7 @@
 		pset:value 0.5
 	] , [
 		lv2:symbol "TREBLE" ;
-		pset:value 0.5
+		pset:value 0.2
 	] , [
 		lv2:symbol "VOLUME" ;
 		pset:value 0.5
