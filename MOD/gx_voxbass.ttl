@@ -41,7 +41,8 @@
 
 <http://guitarix.sourceforge.net/plugins/gx_voxbass_#_voxbass_>
     a lv2:Plugin ,
-        lv2:AmplifierPlugin ;
+        lv2:AmplifierPlugin ,
+        mod:SimulatorPlugin ;
     doap:maintainer <http://guitarix.sourceforge.net#me> ;
     doap:name "GxVBassPreAmp";
     doap:license <http://opensource.org/licenses/isc> ;
