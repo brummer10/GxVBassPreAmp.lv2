@@ -56,7 +56,7 @@ all : check $(NAME)
 
 mod : check nogui
 	@mkdir -p ./$(BUNDLE)
-	@cp ./plugin/*.ttl ./$(BUNDLE)
+	@cp -R ./MOD/* ./$(BUNDLE)
 	@mv ./*.so ./$(BUNDLE)
 	@if [ -f ./$(BUNDLE)/$(NAME).so ]; then echo $(BLUE)"build finish, now run make install"; \
 	else echo $(RED)"sorry, build failed"; fi

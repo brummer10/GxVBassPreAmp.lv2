@@ -1,0 +1,36 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://guitarix.sourceforge.net/plugins/gx_voxbass_#_voxbass_>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-gxvbasspreamp.html> ;
+        modgui:stylesheet <modgui/stylesheet-gxvbasspreamp.css> ;
+        modgui:screenshot <modgui/screenshot-gxvbasspreamp.png> ;
+        modgui:thumbnail <modgui/thumbnail-gxvbasspreamp.png> ;
+        modgui:brand "Guitarix" ;
+        modgui:label "GxVBassPreAmp" ;
+        modgui:model "head-model" ;
+        modgui:panel "vox" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "VOLUME" ;
+            lv2:name "VOLUME" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "BASS" ;
+            lv2:name "BASS" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "MID" ;
+            lv2:name "MID" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "TREBLE" ;
+            lv2:name "TREBLE" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "CAB" ;
+            lv2:name "CAB" ;
+        ] ;
+    ] .
