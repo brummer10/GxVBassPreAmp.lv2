@@ -47,7 +47,7 @@
     lv2:project <http://guitarix.sourceforge.net/plugins/gx_voxbass_> ;
     lv2:optionalFeature lv2:hardRTCapable ;
       
-    lv2:minorVersion 34;
+    lv2:minorVersion 35;
     lv2:microVersion 0;
 
   guiext:ui <http://guitarix.sourceforge.net/plugins/gx_voxbass_gui#_voxbass_>;
@@ -81,7 +81,6 @@ rdfs:comment """
         lv2:maximum 1.0 ;
         lv2:designation lv2:enabled;
         lv2:portProperty lv2:integer;
-
     ] 
       , [
         a lv2:InputPort ,
@@ -136,7 +135,8 @@ rdfs:comment """
     ] .
 
 <http://guitarix.sourceforge.net/plugins/gx_voxbass_gui#_voxbass_>
-  a guiext:GtkUI;
+  a guiext:X11UI;
   guiext:binary <gx_voxbass_ui.so>;
-  guiext:requiredFeature guiext:makeResident;
+        lv2:extensionData guiext::idle ; 
+        lv2:requiredFeature guiext:makeResident;
   .
