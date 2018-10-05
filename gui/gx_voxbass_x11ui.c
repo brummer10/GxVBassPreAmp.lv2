@@ -215,7 +215,7 @@ static LV2UI_Handle instantiate(const struct _LV2UI_Descriptor * descriptor,
 	ui->controls[1] = { 0.5, 0.5, 0.0, 1.0, 0.01, 120, 60, 61, 61, false,"BASS", KNOB, BASS};
 	ui->controls[2] = { 0.5, 0.5, 0.0, 1.0, 0.01, 190, 60, 61, 61, false,"MID", KNOB, MID};
 	ui->controls[3] = { 0.5, 0.5, 0.0, 1.0, 0.01, 260, 60, 61, 61, false,"TREBLE", KNOB, TREBLE};
-	ui->controls[4] = { 0.0, 0.0, 0.0, 1.0, 1.0, 370, 60, 61, 61, false,"CAB", SWITCH, CAB};
+	ui->controls[4] = { 0.0, 0.0, 0.0, 1.0, 1.0, 370, 60, 61, 61, false,"CABINET", SWITCH, CAB};
 	ui->controls[5] = { 1.0, 1.0, 0.0, 1.0, 1.0, 550, 60, 61, 61, false,"POWER", BSWITCH, BYPASS};
 
 
@@ -474,7 +474,7 @@ static void _expose(gx_voxbassUI *ui) {
 
 	cairo_text_extents_t extents;
 	cairo_set_source_rgba (ui->cr, 0.6, 0.6, 0.6,0.6);
-	cairo_set_font_size (ui->cr, 16.0);
+	cairo_set_font_size (ui->cr, 14.0);
 	cairo_select_font_face (ui->cr, "Sans", CAIRO_FONT_SLANT_NORMAL,
 							   CAIRO_FONT_WEIGHT_BOLD);
 	cairo_text_extents(ui->cr, plug_name, &extents);
