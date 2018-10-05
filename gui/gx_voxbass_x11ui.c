@@ -230,7 +230,7 @@ static LV2UI_Handle instantiate(const struct _LV2UI_Descriptor * descriptor,
 								CopyFromParent, CopyFromParent, 0);
 
 	ui->event_mask = StructureNotifyMask|ExposureMask|KeyPressMask 
-					|EnterWindowMask|LeaveWindowMask
+					|EnterWindowMask|LeaveWindowMask|ButtonReleaseMask
 					|ButtonPressMask|Button1MotionMask;
 
 	XSelectInput(ui->dpy, ui->win, ui->event_mask);
@@ -763,6 +763,7 @@ static void motion_event(gx_voxbassUI *ui, double start_value, XMotionEvent *mo)
 static void event_handler(gx_voxbassUI *ui) {
 	XEvent xev;
 	static double start_value = 0.0;
+	static bool blocked = false;
 
 	while (XPending(ui->dpy) > 0) {
 		XNextEvent(ui->dpy, &xev);
@@ -784,6 +785,9 @@ static void event_handler(gx_voxbassUI *ui) {
 
 				switch(xev.xbutton.button) {
 					case Button1:
+						if (xev.xbutton.type == ButtonPress) {
+							blocked = true;
+						}
 						// left mouse button click
 						button1_event(ui, &start_value);
 					break;
@@ -806,6 +810,12 @@ static void event_handler(gx_voxbassUI *ui) {
 					default:
 					break;
 				}
+			break;
+			case ButtonRelease:
+				if (xev.xbutton.type == ButtonRelease) {
+					blocked = false;
+				}
+			break;
 
 			case KeyPress:
 				if ((xev.xkey.state == ShiftMask) &&
@@ -829,10 +839,10 @@ static void event_handler(gx_voxbassUI *ui) {
 					set_key_value(ui, 3);
 			break;
 			case EnterNotify:
-				get_active_controller(ui, true);
+				if (!blocked) get_active_controller(ui, true);
 			break;
 			case LeaveNotify:
-				get_active_controller(ui, false);
+				if (!blocked) get_active_controller(ui, false);
 			break;
 			case MotionNotify:
 				// mouse move while button1 is pressed
