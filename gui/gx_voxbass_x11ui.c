@@ -802,13 +802,13 @@ void get_active_controller(gx_voxbassUI *ui, bool set) {
 }
 
 // mouse move while left button is pressed
-static void motion_event(gx_voxbassUI *ui, double start_value, XMotionEvent *mo) {
+static void motion_event(gx_voxbassUI *ui, double start_value, int m_y) {
 	static const double scaling = 0.5;
 	float value = 0.0;
 	for (int i=0;i<CONTROLS;i++) {
 		if (ui->controls[i].is_active && ui->controls[i].type != BSWITCH && ui->controls[i].type != SWITCH) {
 			value = min(ui->controls[i].adj.max_value,max(ui->controls[i].adj.min_value,start_value + 
-			  (((double)(ui->pos_y - mo->y)*scaling*ui->controls[i].adj.step)*
+			  (((double)(ui->pos_y - m_y)*scaling*ui->controls[i].adj.step)*
 			  (ui->controls[i].adj.max_value-ui->controls[i].adj.min_value))));
 			check_value_changed(ui, i, &value);
 		}
@@ -946,7 +946,7 @@ static void event_handler(gx_voxbassUI *ui) {
 			case MotionNotify:
 				// mouse move while button1 is pressed
 				if(xev.xmotion.state & Button1Mask) {
-					motion_event(ui, start_value, &xev.xmotion);
+					motion_event(ui, start_value, xev.xmotion.y);
 				}
 			break;
 			case ClientMessage:
